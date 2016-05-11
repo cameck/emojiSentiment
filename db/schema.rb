@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511002240) do
+ActiveRecord::Schema.define(version: 20160511005119) do
 
   create_table "saved_searches", force: :cascade do |t|
     t.string   "search"
     t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "twitter_bots", force: :cascade do |t|
+    t.string   "client"
+    t.string   "search"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
