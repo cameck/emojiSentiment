@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 
 gem 'twitter'
-
+gem 'emoji_data'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
