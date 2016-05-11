@@ -10,7 +10,20 @@ class TwitterBot < ActiveRecord::Base
   end
 
   def search(input)
-      search = client.search("##{input}", result_type: "recent").take(100)
-  end
+    search = client.search("##{input}", result_type: "recent").take(1000)
 
+    tweets = []
+
+    search.each do |search_item|
+
+      text = search_item.text
+
+      if text.include?("🍕")
+        tweets << text
+      end
+    end
+
+    return tweets
+
+  end
 end
