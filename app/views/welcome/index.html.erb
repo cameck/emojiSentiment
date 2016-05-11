@@ -1,14 +1,17 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
-
+<h1>EmojiSentiment</h1>
 
 <%= form_tag search_path do %>
-<%= label_tag(:hash_tag, "") %>
+  <%= label_tag(:hash_tag, "") %>
+  <%= text_field_tag(:hash_tag) %>
+  <%= submit_tag("Search") %>
+<% end %>
 
-<div id="headingsearch">
-  <h5 class="left-align">Search for an area..</h5>
-</div>
 
-<%= text_field_tag(:city) %>
-<%= submit_tag("Search") %>
+<% if @tweets %>
+
+  <% @tweets.each do |tweet| %>
+  <p>
+    <%= tweet.text %>
+  </p>
+  <% end %>
 <% end %>
