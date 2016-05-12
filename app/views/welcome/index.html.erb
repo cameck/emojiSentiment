@@ -8,7 +8,7 @@
 
 <%= form_tag search_path do %>
   <%= label_tag(:hash_tag, "") %>
-  <%= text_field_tag(:hash_tag) %>
+  <%= text_field_tag(:hash_tag, "", required: true) %>
   <%= submit_tag("Search") %>
 <% end %>
 
@@ -17,7 +17,8 @@
 
   <% @tweets.each do |tweet| %>
   <p>
-    <%= tweet %>
+    <%= tweet[0][0] %><br />
+    <%= tweet[1] %>
   </p>
   <% end %>
 <% end %>
