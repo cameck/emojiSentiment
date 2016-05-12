@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-
+gem 'devise'
 gem 'twitter'
 gem 'emoji_data'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -38,6 +38,8 @@ gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'better_errors'
+  gem 'rails_12factor'
 end
 
 group :development do
