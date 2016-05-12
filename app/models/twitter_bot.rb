@@ -20,7 +20,7 @@ class TwitterBot < ActiveRecord::Base
     # Scan for Emojis & Save in Array
     tweets = []
 
-    search.each_with_index do |search_item, index|
+    search.each do |search_item|
       text = search_item.text
 
       EmojiData.scan(text).each do |ec|
