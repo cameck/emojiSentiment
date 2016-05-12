@@ -24,7 +24,7 @@ class TwitterBot < ActiveRecord::Base
       text = search_item.text
 
       EmojiData.scan(text).each do |ec|
-        tweets << ec.image
+        tweets << ec.chars
       end
     end
 

@@ -11,7 +11,8 @@
 
   <% @tweets.each do |tweet| %>
   <p>
-    <%= tweet %>
+    <%= tweet[0][0] %><br />
+    <%= tweet[1] %>
   </p>
   <% end %>
 <% end %>
