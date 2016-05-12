@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'better_errors'
-gem 'rails_12factor'
-gem 'binding_of_caller'
+
 gem 'devise'
 gem 'twitter'
 gem 'emoji_data'
@@ -40,6 +38,9 @@ gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'better_errors'
+  gem 'rails_12factor'
+  gem 'binding_of_caller'
 end
 
 group :development do
