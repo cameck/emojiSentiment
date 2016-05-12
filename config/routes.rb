@@ -9,12 +9,12 @@ Rails.application.routes.draw do
   post '/index' => 'welcome#show', as: 'search'
 
   #routes for login, logout, sign in and sign up forms.
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
-  get 'logout' => 'sessions#destroy'
-
-  get '/signup' => 'users#new'
-  post '/users' => 'users#create'
+  # get 'login' => 'sessions#new'
+  # post 'login' => 'sessions#create'
+  # get 'logout' => 'sessions#destroy'
+  #
+  # get '/signup' => 'users#new'
+  # post '/users' => 'users#create'
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
