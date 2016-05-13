@@ -21,7 +21,7 @@
   </p>
 
  <% end %>
-
+<%= "General Sentiment Score: #{@average_sentiment}%" %>
  <%  @tweets.each do |tweet| %>
  <p>
    <%= tweet[0][0] %><br />

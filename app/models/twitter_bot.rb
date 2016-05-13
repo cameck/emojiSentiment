@@ -12,7 +12,7 @@ class TwitterBot < ActiveRecord::Base
 
   def search(input)
     # GET Twitter hashtag search Results
-    search = client.search("##{input}", result_type: "recent").take(1000)
+    search = client.search("##{input}", result_type: "recent").take(100)
 
     emoji_scan(search)
   end
@@ -54,8 +54,26 @@ class TwitterBot < ActiveRecord::Base
     sentiments = []
 
     tweets.each do |tweet|
-      sentiments << Sentiment.find_by(emoji: tweet[0]).sentiment
+      emoji_sentiment = Sentiment.find_by(emoji: tweet)
+      sentiments << if emoji_sentiment
+                           '%.2f' % (emoji_sentiment.sentiment)
+                    end
     end
     sentiments
+  end
+
+  def calc_average_sentiment(tweets, sentiments)
+    total_sentiment = []
+    total_occurences = 0
+    tweets.zip(sentiments).each do |tweet, sentiment|
+      total_sentiment << tweet[1] * sentiment.to_f
+      total_occurences += tweet[1]
+    end
+
+    score = 0
+    total_sentiment.each do |total_sentiment|
+      score += total_sentiment
+    end
+    '%.2f' % (score / total_occurences)
   end
 end
