@@ -1,6 +1,7 @@
 <nav>
   <p>
-    <%= link_to 'New User', new_user_registration_path %>
+    <%= link_to 'New User', new_user_registration_path %> <br />
+    <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
   </p>
 </nav>
 
