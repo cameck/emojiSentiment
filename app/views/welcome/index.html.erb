@@ -15,11 +15,17 @@
 
 
 <% if @tweets %>
-
-  <% @tweets.each do |tweet| %>
+  <% @sentiments.each do |sentiment| %>
   <p>
-    <%= tweet[0][0] %><br />
-    <%= tweet[1] %>
+    <%= "Sentiment Score: #{sentiment}%" %>
   </p>
-  <% end %>
+
+ <% end %>
+
+ <%  @tweets.each do |tweet| %>
+ <p>
+   <%= tweet[0][0] %><br />
+   <%= tweet[1] %>
+ </p>
+ <% end %>
 <% end %>

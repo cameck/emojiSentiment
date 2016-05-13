@@ -8,6 +8,7 @@ class WelcomeController < ApplicationController
     hash_tag = params[:hash_tag]
     tweets= TwitterBot.new()
     @tweets = tweets.search(hash_tag)
+    @sentiments = tweets.get_sentiment(@tweets)
     render 'index'
   end
 

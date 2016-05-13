@@ -48,4 +48,14 @@ class TwitterBot < ActiveRecord::Base
     sorted_tweets = tweet_counts.sort_by {|_key, value| value}
     sorted_tweets = sorted_tweets.last(3).reverse
   end
+
+  def get_sentiment(tweets)
+    # analyze sentiment
+    sentiments = []
+
+    tweets.each do |tweet|
+      sentiments << Sentiment.find_by(emoji: tweet[0]).sentiment
+    end
+    sentiments
+  end
 end
