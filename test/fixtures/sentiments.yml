@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emoji: MyString
+  sentiment: 
+  precision: MyString
+  5: MyString
+
+two:
+  emoji: MyString
+  sentiment: 
+  precision: MyString
+  5: MyString

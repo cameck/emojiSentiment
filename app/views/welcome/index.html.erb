@@ -8,7 +8,7 @@
 
 <%= form_tag search_path do %>
   <%= label_tag(:hash_tag, "") %>
-  <%= text_field_tag(:hash_tag, "", required: true) %>
+  <%= text_field_tag(:hash_tag, "#", required: true) %>
   <%= submit_tag("Search") %>
 <% end %>
 

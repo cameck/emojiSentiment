@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512192931) do
+ActiveRecord::Schema.define(version: 20160513003753) do
 
   create_table "saved_searches", force: :cascade do |t|
     t.string   "search"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sentiments", force: :cascade do |t|
+    t.string   "emoji"
+    t.decimal  "sentiment",  precision: 5, scale: 2
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "twitter_bots", force: :cascade do |t|
