@@ -17,3 +17,4 @@
 /tmp
 
 configs.yml
+/initializers/api.rb

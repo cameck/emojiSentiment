@@ -2,13 +2,14 @@ Rails.application.routes.draw do
 
 
   devise_for :users, :controllers => { registrations: 'registrations' }
-   
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   post '/index' => 'welcome#show', as: 'search'
+  post '/process-request' => 'twitter_scanner#process_request'
 
   #routes for login, logout, sign in and sign up forms.
   # get 'login' => 'sessions#new'

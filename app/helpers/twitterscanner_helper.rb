@@ -1,0 +1,2 @@
+module TwitterscannerHelper
+end
