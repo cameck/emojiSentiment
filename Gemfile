@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
 
-
+# Schedule Cron Jobs
+gem 'whenever', :require => false
+# user login
 gem 'devise'
+# twitter API
 gem 'twitter'
+# parse Emojis
 gem 'emoji_data'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
