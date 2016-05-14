@@ -46,7 +46,7 @@
 
  .header .sign_up_out li:last-child a {
    background-color: black;
-   padding: 1em 2.5em 1em 2.5em;
+   padding: .7em 2.5em .7em 2.5em;
  }
 
  .header .sign_up_out li:last-child a:hover {
