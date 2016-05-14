@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# JS Charting
+gem "chartkick"
+# Group Chart data by Groups
+gem 'groupdate'
 # Schedule Cron Jobs
 gem 'whenever', :require => false
 # user login
