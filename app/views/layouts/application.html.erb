@@ -5,13 +5,44 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="https://use.typekit.net/zrc0tqc.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
 </head>
+
 <body>
 
-<%= yield %>
+  <div class="wrap">
+    <div class="header">
+      <div class="container">
+        <ul class="navigation">
+          <li><%= link_to 'HOME', root_path %></li>
+          <li><%= link_to 'WHY', root_path %></li>
+          <li><%= link_to 'ABOUT', root_path %></li>
+          <li><%= link_to 'CONTACT', root_path %></li>
+        </ul>
+        <!-- <ul class="sign_up_out">
+          <li><%= link_to 'LOG IN', new_user_session_path %></li>
+          <li><%= link_to 'SIGN UP', new_user_registration_path %></li>
+        </ul> -->
+      </div>
+    </div>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+    <div class="content_body">
+      <%= yield %>
+    </div>
+  </div>
+
+  <div class="footer">
+    <ul>
+      <li>FAQ<l1>
+      <li>|<l1>
+      <li><a href="https://twitter.com/emoji_sentiment" target="_blank">Twitter</a><l1>
+      <li>Facebook<l1>
+  </div>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
 </body>
 </html>
