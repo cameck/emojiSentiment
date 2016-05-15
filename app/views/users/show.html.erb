@@ -1,3 +1,10 @@
 <div>
-  <h1>Hello, <%= @user.name %></h1>
+  <h1>Hello, <%= @user.name %> <%= @user.last_name %></h1>
+  <h3>COMPANY NAME:
+    <% if @user.company_name.empty? %>
+      No company defined :(
+    <% else %>
+      <%= @user.company_name %>
+    <% end %>
+  </h3>
 </div>
