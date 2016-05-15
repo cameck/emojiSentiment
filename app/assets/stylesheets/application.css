@@ -29,15 +29,25 @@
 
  .header {
    background-color: #FDD700;
+   position: relative;
+   text-align: center;
    /*padding: .8em;*/
  }
 
- .header a {
+ .header .navigation a {
    font-weight: 600;
-   font-size: 1em;
+   font-size: .9em;
    text-decoration: none;
    color: white;
-   margin: 0 2em 0 2em;
+   margin: 0 1.5em 0 1.5em;
+ }
+
+ .header .sign_up_out a {
+   font-weight: 600;
+   font-size: .9em;
+   text-decoration: none;
+   color: white;
+   margin: 0 0 0 1.5em;
  }
 
  .header a:hover {
@@ -46,7 +56,7 @@
 
  .header .sign_up_out li:last-child a {
    background-color: black;
-   padding: 1em 2em .7em 2em;
+   padding: 1em 2em .8em 2em;
  }
 
  .header .sign_up_out li:last-child a:hover {
@@ -64,8 +74,9 @@
    display: inline-block;
  }
 
-.header .container {
-  text-align: center;
+.sign_up_out {
+  position: absolute;
+  right: 4%;
 }
 
 /*___________________________*/
