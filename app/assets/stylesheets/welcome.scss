@@ -1,3 +1,18 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.logo img{
+  width: 20em;
+  height: auto;
+  display: block;
+}
+
+.description p {
+  text-align: center;
+  font-weight: 300;
+}
+
+.descriptionlanding {
+  // margin: 30vh;
+}
