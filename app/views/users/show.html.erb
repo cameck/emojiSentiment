@@ -8,3 +8,19 @@
     <% end %>
   </h3>
 </div>
+
+<br />
+
+
+<div>
+  <h3> Last Search : </h3>
+</div>
+
+<br />
+
+<div>
+  <h2> Saved Searches</h2>
+</div>
+
+
+<%= line_chart Sentiment.group(:sentiment).count %>
