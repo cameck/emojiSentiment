@@ -14,8 +14,8 @@
   <div class="landingform">
     <%= form_tag search_path do %>
       <%= label_tag(:hash_tag, "") %>
-      <%= text_field_tag(:hash_tag, "#", required: true) %>
-      <%= submit_tag("Search") %>
+      <%= text_field_tag(:hash_tag, "#", required: true, class: "ser") %>
+      <%= submit_tag("Search", class: "ser") %>
     <% end %>
 
 
@@ -32,7 +32,7 @@
        <%= tweet[0][0] %><br />
        <%= tweet[1] %>
      </p>
-     <% end %>
+      <% end %>
     <% end %>
   </div>
 </div>
