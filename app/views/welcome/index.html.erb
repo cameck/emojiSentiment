@@ -24,21 +24,6 @@
     <% end %>
 
 
-    <% if @tweets %>
-      <% @sentiments.each do |sentiment| %>
-      <p>
-        <%= "Sentiment Score: #{sentiment}%" %>
-      </p>
-
-     <% end %>
-    <%= "General Sentiment Score: #{@average_sentiment}%" %>
-     <%  @tweets.each do |tweet| %>
-     <p>
-       <%= tweet[0][0] %><br />
-       <%= tweet[1] %>
-     </p>
-      <% end %>
-    <% end %>
   </div>
 </div>
 
