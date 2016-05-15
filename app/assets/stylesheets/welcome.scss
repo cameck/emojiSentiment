@@ -2,17 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.descriptionlanding {
+  height: 30%;
+  width: 45%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  margin: auto;
+}
+
 .logo img{
-  width: 20em;
+  width: 18em;
   height: auto;
   display: block;
+  margin: auto;
 }
 
 .description p {
+  border-top: .1em solid rgba(0, 0, 0, .1);
+  padding-top: 2em;
+  margin-top: 2em;
   text-align: center;
   font-weight: 300;
 }
 
-.descriptionlanding {
-  // margin: 30vh;
+.landingform form {
+  // margin: auto;
 }

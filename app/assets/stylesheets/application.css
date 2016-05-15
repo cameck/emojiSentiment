@@ -17,6 +17,7 @@
  body {
    font-family: "proxima-nova";
    background-color: #F2F2F2;
+   position: relative;
  }
 
  .content_body {
@@ -31,7 +32,6 @@
    background-color: #FDD700;
    position: relative;
    text-align: center;
-   /*padding: .8em;*/
  }
 
  .header .navigation a {
@@ -40,6 +40,10 @@
    text-decoration: none;
    color: white;
    margin: 0 1.5em 0 1.5em;
+ }
+
+ .navigation {
+   padding: 0;
  }
 
  .header .sign_up_out a {
@@ -52,6 +56,8 @@
 
  .header a:hover {
    color: black;
+   padding-bottom: .7em;
+   border-bottom: .3em solid black;
  }
 
  .header .sign_up_out li:last-child a {
@@ -62,6 +68,8 @@
  .header .sign_up_out li:last-child a:hover {
    background-color: white;
    color: black;
+   padding-bottom: none;
+   border-bottom: none;
  }
 
  .header ul {
