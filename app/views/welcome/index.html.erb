@@ -13,29 +13,16 @@
   <div class="landingsearch">
     <%= form_tag search_path do %>
       <%= label_tag(:hash_tag, "") %>
+
       <%= text_field_tag(:hash_tag, "#", required: true, :class=> "searchfield") %>
       <!-- <%= submit_tag("Search")%> -->
       <%= button_tag( :class => "searchicon" ) do %>
         <i class="fa fa-search"></i>
       <% end %>
+
     <% end %>
 
 
-    <% if @tweets %>
-      <% @sentiments.each do |sentiment| %>
-      <p>
-        <%= "Sentiment Score: #{sentiment}%" %>
-      </p>
-
-     <% end %>
-    <%= "General Sentiment Score: #{@average_sentiment}%" %>
-     <%  @tweets.each do |tweet| %>
-     <p>
-       <%= tweet[0][0] %><br />
-       <%= tweet[1] %>
-     </p>
-     <% end %>
-    <% end %>
   </div>
 </div>
 
