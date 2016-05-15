@@ -28,6 +28,20 @@
   font-weight: 300;
 }
 
-.landingform form {
+.landingsearch form {
   // margin: auto;
+}
+
+.searchfield {
+  border: none;
+  padding: .2em;
+  padding-right: 1em;
+}
+
+button[type="submit"] {
+  border: none;
+  background: none;
+  padding: .2em;
+  margin: -2em;
+  // opacity: 0.3;
 }

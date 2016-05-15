@@ -11,11 +11,16 @@
       twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled f
     </p>
   </div>
-  <div class="landingform">
+  <div class="landingsearch">
     <%= form_tag search_path do %>
       <%= label_tag(:hash_tag, "") %>
-      <%= text_field_tag(:hash_tag, "#", required: true, class: "ser") %>
-      <%= submit_tag("Search", class: "ser") %>
+
+      <%= text_field_tag(:hash_tag, "#", required: true, :class=> "searchfield") %>
+      <!-- <%= submit_tag("Search")%> -->
+      <%= button_tag( :class => "searchicon" ) do %>
+        <i class="fa fa-search"></i>
+      <% end %>
+
     <% end %>
 
 
