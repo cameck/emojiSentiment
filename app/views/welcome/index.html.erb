@@ -15,7 +15,10 @@
     <%= form_tag search_path do %>
       <%= label_tag(:hash_tag, "") %>
       <%= text_field_tag(:hash_tag, "#", required: true) %>
-      <%= submit_tag("Search") %>
+      <!-- <%= submit_tag("Search")%> -->
+      <%= button_tag( :class => "" ) do %>
+        <i class="fa fa-search"></i>
+      <% end %>
     <% end %>
 
 
