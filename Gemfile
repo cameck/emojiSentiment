@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 # JS Charting
 gem "chartkick"
 # Group Chart data by Groups

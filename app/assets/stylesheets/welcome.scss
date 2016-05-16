@@ -45,3 +45,39 @@ button[type="submit"] {
   margin: -2em;
   // opacity: 0.3;
 }
+
+// Center and add search icon to search box
+#search-box {
+  text-align: center;
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+
+}
+
+.search-state::after {
+  // content: "\f002";
+  // font-family: FontAwesome;
+  // right: 140px;
+  // position: absolute;
+  // top: 4px;
+}
+
+
+
+.searchfield {
+  transition: all .8s;
+  width: 40%;
+  font-family: FontAwesome;
+  color: #b2b2b2;
+}
+.searchfield:focus {
+  width: 50%;
+  content: "";
+  color: #000;
+}
+
+
+.searchfield:focus::input::-moz-placeholder {
+  color: white;
+}
