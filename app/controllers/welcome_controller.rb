@@ -9,6 +9,7 @@ class WelcomeController < ApplicationController
     @hash_tag = params[:hash_tag]
     tweets= TwitterBot.new()
     @tweets = tweets.search(@hash_tag)
+    @total_aggregate_tweets = tweets.calc_total_aggregate_tweets(@tweets)
     @sentiments = tweets.get_sentiment(@tweets)
     @average_sentiment = tweets.calc_average_sentiment(@tweets, @sentiments)
   end

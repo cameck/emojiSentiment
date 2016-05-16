@@ -76,4 +76,12 @@ class TwitterBot < ActiveRecord::Base
     end
     '%.2f' % (score / total_occurences)
   end
+
+  def calc_total_aggregate_tweets(tweets)
+    aggregate_tweet_number = 0
+    tweets.each do |tweet|
+      aggregate_tweet_number += tweet[1]
+    end
+    aggregate_tweet_number
+  end
 end
