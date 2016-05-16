@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516192618) do
+ActiveRecord::Schema.define(version: 20160516232632) do
 
   create_table "saved_search_items", force: :cascade do |t|
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
     t.decimal  "sentiment_score", precision: 5, scale: 2
+    t.integer  "saved_search_id"
   end
+
+  add_index "saved_search_items", ["saved_search_id"], name: "index_saved_search_items_on_saved_search_id"
 
   create_table "saved_searches", force: :cascade do |t|
     t.string   "search"
