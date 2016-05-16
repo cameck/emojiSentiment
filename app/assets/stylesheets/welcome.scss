@@ -43,8 +43,6 @@
 .searchfield {
   border: none;
   padding: .4em;
-  padding-left: 2em;
-  padding-right: 2em;
   position: relative;
 }
 
@@ -79,11 +77,12 @@ button[type="submit"] {
 .searchfield {
   -webkit-transition: all .8s;
   transition: all .8s;
-  width: 40%;
+  width: 50%;
   font-family: FontAwesome;
   color: #b2b2b2;
 }
+
 .searchfield:focus {
-  width: 50%;
+  width: 55%;
   color: #000;
 }
