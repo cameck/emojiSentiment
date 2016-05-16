@@ -21,7 +21,7 @@
  }
 
  .content_body {
-   width: 70%;
+   width: 100%;
    margin: auto;
  }
 
@@ -40,6 +40,7 @@
    text-decoration: none;
    color: white;
    margin: 0 1.5em 0 1.5em;
+   transition: all .4s;
  }
 
  .navigation {
@@ -52,6 +53,7 @@
    text-decoration: none;
    color: white;
    margin: 0 0 0 1.5em;
+   transition: all .4s;
  }
 
  .header a:hover {
@@ -91,7 +93,8 @@
 /*_________ footer __________*/
 
 .footer {
-  width: 96%;
+  width: 92%;
+  margin: auto;
 }
 
 .footer ul {

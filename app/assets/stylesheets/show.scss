@@ -1,0 +1,33 @@
+
+/*___________________________*/
+/*_________ LAYOUT __________*/
+
+.showresults {
+  width: 45%;
+  margin: auto;
+}
+
+/*___________________________*/
+/*_________ CONTENT __________*/
+
+.search_hashtag {
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.description_emoji_search p {
+  border-top: .1em solid rgba(0, 0, 0, .1);
+  padding-top: 2.3em;
+  margin-top: 2.0em;
+  text-align: center;
+  font-weight: 300;
+}
+/*___________________________*/
+/*_________ ARROW __________*/
+
+.backarrow img {
+  width: 1em;
+  position: absolute;
+  left: 4%;
+}

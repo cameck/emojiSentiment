@@ -15,16 +15,16 @@
       <%= label_tag(:hash_tag, "") %>
 
       <%= text_field_tag(:hash_tag, "#", required: true, :class=> "searchfield") %>
-      <!-- <%= submit_tag("Search")%> -->
       <%= button_tag( :class => "searchicon" ) do %>
         <i class="fa fa-search"></i>
       <% end %>
 
     <% end %>
 
-
   </div>
 </div>
 
+
+<!-- <%= link_to "<i class='fa fa-arrow-left' aria-hidden='true'></i>".html_safe, root_path %> -->
 
 <!-- <%= line_chart Sentiment.group(:sentiment).count %> -->
