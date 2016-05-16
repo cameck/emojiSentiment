@@ -8,8 +8,7 @@ class SavedSearch < ActiveRecord::Base
       tweets = general_sentiment.search(search_item.sentiment_score)
       sentiments = general_sentiment.get_sentiment(tweets)
       average_sentiment = general_sentiment.calc_average_sentiment(tweets, sentiments)
-      new_sentiment_item = SavedSearchItem.new(average_sentiment)
-      new_sentiment_item.save
+      SavedSearchItem.create(sentiment_score: average_sentiment)
     end
   end
 end
