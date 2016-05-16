@@ -3,7 +3,13 @@
 /*_________ LAYOUT __________*/
 
 .showresults {
+  height: 30%;
   width: 45%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
   margin: auto;
 }
 
@@ -11,9 +17,9 @@
 /*_________ CONTENT __________*/
 
 .search_hashtag {
-  height: auto;
-  display: block;
-  margin: auto;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
 }
 
 .description_emoji_search p {
