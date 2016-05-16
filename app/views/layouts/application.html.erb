@@ -2,14 +2,14 @@
 <html>
 <head>
   <title>EmojiSentiment</title>
+  <script src="https://use.typekit.net/zrc0tqc.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <script src="https://use.fontawesome.com/935af6820b.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "https://www.google.com/jsapi" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <script src="https://use.typekit.net/zrc0tqc.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <script src="https://use.fontawesome.com/935af6820b.js"></script>
 </head>
 
 <body>
@@ -24,6 +24,7 @@
         </ul>
         <ul class="sign_up_out">
           <% if user_signed_in? %>
+                Hello, <%= current_user.name %> <%= current_user.last_name %>
             <li><%= link_to('LOGOUT', destroy_user_session_path, :method => :delete) %></li>
             <% else %>
             <li><%= link_to "LOG IN", new_user_session_path %></li>
