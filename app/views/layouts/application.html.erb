@@ -2,13 +2,13 @@
 <html>
 <head>
   <title>EmojiSentiment</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "https://www.google.com/jsapi" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <script src="https://use.typekit.net/zrc0tqc.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
   <script src="https://use.fontawesome.com/935af6820b.js"></script>
 </head>
 
@@ -44,7 +44,8 @@
       <li>FAQ<l1>
       <li>|<l1>
       <li><a href="https://twitter.com/emoji_sentiment" target="_blank">Twitter</a><l1>
-      <li>Facebook<l1>
+      <li>|</li>
+      <li><a href="https://facebook.com/">Facebook</a><l1>
   </div>
 
   <p class="notice"><%= notice %></p>

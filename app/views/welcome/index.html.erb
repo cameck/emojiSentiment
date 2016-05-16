@@ -6,25 +6,25 @@
     <p>
       Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
       twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag
-
+​
       Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,  truffaut meh
-      twee forage fixie quinoa keffiyeh crucifix XOXO.
+      twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled f
+    </p>
   </div>
   <div class="landingsearch">
     <%= form_tag search_path do %>
       <%= label_tag(:hash_tag, "") %>
-
-      <%= text_field_tag(:hash_tag, "#", required: true, :class=> "searchfield") %>
-      <%= button_tag( :class => "searchicon" ) do %>
-        <i class="fa fa-search"></i>
-      <% end %>
-
+      <div id="search-box" class="search-state">
+        <%= text_field_tag(:hash_tag, "&#xf002; #".html_safe,
+                           required: true, :class=> "searchfield") %>
+        <!-- <%= submit_tag("Search")%> -->
+​
+      </div>
     <% end %>
-
+​
+​
   </div>
 </div>
-
-
-<!-- <%= link_to "<i class='fa fa-arrow-left' aria-hidden='true'></i>".html_safe, root_path %> -->
-
+​
+​
 <!-- <%= line_chart Sentiment.group(:sentiment).count %> -->
