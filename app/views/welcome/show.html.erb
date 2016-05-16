@@ -1,33 +1,32 @@
+  <div class="showresults">
+    <div class="search_hashtag">
+      #<%= @hash_tag %>
+    </div>
+    <div class="description_emoji_search">
+      <p>
+        Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
+        twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag
 
-<div class="showresults">
-  <div class="search_hashtag">
-    <%=  @hash_tag %>
-  </div>
-  <div class="description_emoji_search">
-    <p>
-      Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
-      twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag
+        Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,  truffaut meh
+        twee forage fixie quinoa keffiyeh crucifix XOXO.
+    </div>
 
-      Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,  truffaut meh
-      twee forage fixie quinoa keffiyeh crucifix XOXO.
-  </div>
+    <%= "General Sentiment Score: #{@average_sentiment}%" %>
+    <% if @tweets %>
+      <% @sentiments.each do |sentiment| %>
+      <p>
+        <%= "Sentiment Score: #{sentiment}%" %>
+      </p>
 
-  <%= "General Sentiment Score: #{@average_sentiment}%" %>
-  <% if @tweets %>
-    <% @sentiments.each do |sentiment| %>
-    <p>
-      <%= "Sentiment Score: #{sentiment}%" %>
-    </p>
-
-   <% end %>
-   <%  @tweets.each do |tweet| %>
-   <p>
-     <%= tweet[0][0] %><br />
-     <%= tweet[1] %>
-   </p>
+     <% end %>
+     <%  @tweets.each do |tweet| %>
+     <p>
+       <%= tweet[0][0] %><br />
+       <%= tweet[1] %>
+     </p>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
 
 <div class="backarrow">
   <%= link_to "<img src='/assets/arrow-03.png' alt='arrow'>".html_safe, root_path %>
