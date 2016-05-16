@@ -15,7 +15,7 @@
  */
 
  body {
-   font-family: "proxima-nova";
+   font-family: proxima-nova, sans-serif;
    background-color: #F2F2F2;
    position: relative;
  }

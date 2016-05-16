@@ -15,7 +15,7 @@
     <%= form_tag search_path do %>
       <%= label_tag(:hash_tag, "") %>
       <div id="search-box" class="search-state">
-        <%= text_field_tag(:hash_tag, "&#xf002; #".html_safe,
+        <%= text_field_tag(:hash_tag, "&#xf002;".html_safe,
                            required: true, :class=> "searchfield") %>
         <!-- <%= submit_tag("Search")%> -->
 ​
