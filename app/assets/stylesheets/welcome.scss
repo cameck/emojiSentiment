@@ -77,6 +77,7 @@ button[type="submit"] {
 
 
 .searchfield {
+  -webkit-transition: all .8s;
   transition: all .8s;
   width: 40%;
   font-family: FontAwesome;
@@ -84,11 +85,5 @@ button[type="submit"] {
 }
 .searchfield:focus {
   width: 50%;
-  content: "";
   color: #000;
-}
-
-
-.searchfield:focus::input::-moz-placeholder {
-  color: white;
 }
