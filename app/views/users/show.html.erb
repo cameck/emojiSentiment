@@ -33,4 +33,4 @@
 </div>
 
 
-<%= line_chart current_user.saved_searches.group(:created_at).count %>
+  <%= line_chart current_user.saved_search_items.group_by_day(:sentiment_score).count %>

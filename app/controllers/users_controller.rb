@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def save_search
+    @saved_searches = saved_searches
     SavedSearch.create( search: params[:hash_tag], user_id: current_user.id )
     flash[:notice] = "#{params[:hash_tag]} successfully saved, check back in a few days as we aggregate some data you :)"
     render 'show'
