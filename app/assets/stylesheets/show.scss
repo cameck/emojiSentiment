@@ -70,7 +70,7 @@
   float: right;
 }
 
-.agregate_sentiment_board .container {
+.agregate_sentiment_board .row {
   border-bottom: .1em solid rgba(0, 0, 0, .15);
   margin: 0 .7em .8em .7em;
   padding-bottom: .4em;
@@ -125,7 +125,7 @@
   font-weight: 100;
 }
 
-.agregate_sentiment_board_description .container {
+.agregate_sentiment_board_description .row {
   border-bottom: .1em solid rgba(0, 0, 0, .15);
   margin: 0 .7em .8em .7em;
   padding-bottom: .4em;
@@ -176,7 +176,7 @@
   width: 30%;
 }
 
-.single_sentiment_board .container {
+.single_sentiment_board .row {
   border-bottom: .1em solid rgba(0, 0, 0, .15);
   margin: 0 .7em .8em .7em;
   padding-bottom: .25em;
@@ -235,7 +235,7 @@
   font-weight: 100;
 }
 
-.single_sentiment_board_description .container {
+.single_sentiment_board_description .row {
   border-bottom: .1em solid rgba(0, 0, 0, .15);
   margin: 0 .7em .8em .7em;
   padding-bottom: .4em;
