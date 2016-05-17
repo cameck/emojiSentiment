@@ -1,35 +1,57 @@
 <div class="showresults">
-  <div class="search_hashtag">
-    #<%= @hash_tag %>
-  </div>
-  <div class="description_emoji_search">
-    <p>
-      Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
-      twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag next level brunch
-  </div>
-<div class="agregate_sentiment_board">
-  <p>Total Associated Tweets</p>
-  <div class="agregate_sentiment">
-    Agregate Sentiment: <span><%= "#{@average_sentiment}" %></span>
-  </div>
+
+<div class="search_hashtag">
+  #<%= @hash_tag %>
+</div>
+<div class="description_emoji_search">
+  <p>
+    Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
+    twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag next level brunch
 </div>
 
-  <% if @tweets %>
-    <% @sentiments.each do |sentiment| %>
-    <p>
-      <%= "Sentiment Score: #{sentiment}%" %>
-    </p>
+<div class="agregate_sentiment_board">
+  <p>Total Associated Tweets <i class="fa fa-twitter" aria-hidden="true"></i></p>
+  <div class="container">
+    <span class="agregate_sentiment">
+      Agregate Sentiment: <span><%= "#{@average_sentiment}" %></span>
+    </span>
+    <span class="agregate_total_tweets">
+      <%= @total_aggregate_tweets %>
+    </span>
+  </div>
+    <div class="sentiment_bar">
+    </div>
+    <div class="numbers">
+      <span>0</span>
+      <span>|</span>
+      <span>|</span>
+      <span>|</span>
+      <span>|</span>
+      <span>50</span>
+      <span>|</span>
+      <span>|</span>
+      <span>|</span>
+      <span>|</span>
+      <span>100</span>
+    </div>
+</div>
 
-   <% end %>
-   <%  @tweets.each do |tweet| %>
-   <p>
-     <%= tweet[0][0] %><br />
-     <%= tweet[1] %>
-   </p>
-    <% end %>
+<% if @tweets %>
+  <% @sentiments.each do |sentiment| %>
+  <p>
+    <%= "Sentiment Score: #{sentiment}%" %>
+  </p>
+
+ <% end %>
+ <%  @tweets.each do |tweet| %>
+ <p>
+   <%= tweet[0][0] %><br />
+   <%= tweet[1] %>
+ </p>
   <% end %>
+<% end %>
 </div>
 
 <div class="backarrow">
-  <%= link_to "<img src='/assets/arrow-03.png' alt='arrow'>".html_safe, root_path %>
+<%= link_to "<img src='/assets/arrow-03.png' alt='arrow'>".html_safe, root_path %>
 </div>
