@@ -1,56 +1,96 @@
 <div class="showresults">
-
-<div class="search_hashtag">
-  #<%= @hash_tag %>
-</div>
-<div class="description_emoji_search">
-  <p>
-    Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
-    twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag next level brunch
-</div>
-
-<div class="agregate_sentiment_board">
-  <p>Total Associated Tweets <i class="fa fa-twitter" aria-hidden="true"></i></p>
-  <div class="container">
-    <span class="agregate_sentiment">
-      Agregate Sentiment: <span><%= "#{@average_sentiment}" %></span>
-    </span>
-    <span class="agregate_total_tweets">
-      <%= @total_aggregate_tweets %>
-    </span>
+  <div class="search_hashtag">
+    #<%= @hash_tag %>
   </div>
-    <div class="sentiment_bar">
-    </div>
-    <div class="numbers">
-      <span>0</span>
-      <span>|</span>
-      <span>|</span>
-      <span>|</span>
-      <span>|</span>
-      <span>50</span>
-      <span>|</span>
-      <span>|</span>
-      <span>|</span>
-      <span>|</span>
-      <span>100</span>
-    </div>
-</div>
+  <div class="description_emoji_search">
+    <p>
+      Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
+      twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag next level brunch
+    </p>
+  </div>
 
-<div class="single_sentiment_board">
-  <% if @tweets %>
-    <% @sentiments.zip(@tweets) do |sentiment, tweet| %>
-    <div class="container_board">
-      <p> Sentiment </p>
-      <div class="container">
-        <span class="single_emoji"><%= tweet[0][0] %></span>
-        <span class="single_emoji_sentiment"><%= sentiment %></span>
-      </div>
+  <div class="agregate_sentiment_board">
+    <p>Total Associated Tweets <i class="fa fa-twitter" aria-hidden="true"></i></p>
+    <div class="container">
+      <span class="agregate_sentiment">
+        Agregate Emoji Sentiment: <span><%= "#{@average_sentiment}" %></span>
+      </span>
+      <span class="agregate_total_tweets">
+        <%= @total_aggregate_tweets %>
+      </span>
+    </div>
       <div class="sentiment_bar">
       </div>
+      <div class="numbers">
+        <span>0</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>50</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>100</span>
+      </div>
+  </div>
+
+  <!-- <div class="agregate_sentiment_board_description">
+    <p>Agregate Sentiment</p>
+    <div class="container">
+      <span class="sentiment_description">
+        Sentiment: <span>Measured in a scale from 0 - 100</span>
+      </span>
+      <span class="agregate_sentiment_description">
+        Avg top 3 Emojis
+      </span>
     </div>
+      <div class="description_links">
+        <span>Emoji sentiment based on: <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144296" target="_blank">Emoji Sentiment Ranking 1.0</a><span>
+        <span class="sentiment_color">
+          <span class="c_1">0 = Negativity <i class="fa fa-circle" aria-hidden="true"></i></span>
+          <span class="c_2">50 = Neutrality <i class="fa fa-circle" aria-hidden="true"></i></span>
+          <span class="c_3">100 = Positivity <i class="fa fa-circle" aria-hidden="true"></i></span>
+        </span>
+      </div>
+  </div> -->
+
+  <div class="single_sentiment_board">
+    <% if @tweets %>
+      <% @sentiments.zip(@tweets) do |sentiment, tweet| %>
+      <div class="container_board">
+        <p> Emoji Sentiment </p>
+        <div class="container">
+          <span class="single_emoji"><%= tweet[0][0] %></span>
+          <span class="single_emoji_sentiment"><%= sentiment %></span>
+        </div>
+        <div class="sentiment_bar">
+        </div>
+      </div>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
+
+  <div class="single_sentiment_board_description">
+    <p>Associated Tweets <i class="fa fa-twitter" aria-hidden="true"></i></p>
+    <div class="container">
+      <span class="sentiment_description">
+        Emoji Name <span>unicode</span>
+      </span>
+      <span class="agregate_sentiment_description">
+        <%= @tweets[0][1] %>
+      </span>
+    </div>
+      <div class="description_links">
+        <span>Emoji sentiment based on: <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144296" target="_blank">Emoji Sentiment Ranking 1.0</a><span>
+        <span class="sentiment_color">
+          <span class="c_1">0 = Negativity <i class="fa fa-circle" aria-hidden="true"></i></span>
+          <span class="c_2">50 = Neutrality <i class="fa fa-circle" aria-hidden="true"></i></span>
+          <span class="c_3">100 = Positivity <i class="fa fa-circle" aria-hidden="true"></i></span>
+        </span>
+      </div>
+  </div>
 
 </div>
 
