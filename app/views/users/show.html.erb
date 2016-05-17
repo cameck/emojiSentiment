@@ -1,16 +1,28 @@
 <div>
-  <h1>Hello, <%= @user.name %> <%= @user.last_name %></h1>
+  <h1>Hello, <%= current_user.name %> <%= current_user.last_name %></h1>
   <h3>COMPANY NAME:
-    <% if @user.company_name.empty? %>
+    <% if current_user.company_name.empty? %>
       No company defined :(
     <% else %>
-      <%= @user.company_name %>
+      <%= current_user.company_name %>
     <% end %>
   </h3>
 </div>
 
 <br />
 
+<div class="landingsearch">
+  <h3>Add a Hashtag that you would like to track over time</h3>
+  <%= form_tag profile_path do %>
+    <%= label_tag(:hash_tag, "") %>
+    <div id="search-box" class="search-state">
+      <%= text_field_tag(:hash_tag, "&#xf002;".html_safe,
+                         required: true, :class=> "searchfield") %>
+      <!-- <%= submit_tag("Search")%> -->
+​
+    </div>
+  <% end %>
+</div>
 
 <div>
   <h3> Last Search : </h3>
@@ -20,7 +32,10 @@
 
 <div>
   <h2> Saved Searches</h2>
+  <% @saved_searches.each do |search_item| %>
+  <%= search_item.search %>
+  <% end  %>
 </div>
 
 
-<%= line_chart Sentiment.group(:sentiment).count %>
+<%= line_chart SavedSearchItem.group(:sentiment_score).count %>

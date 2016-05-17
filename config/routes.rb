@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
   post '/index' => 'welcome#show', as: 'search'
   post '/process-request' => 'twitter_scanner#process_request'
-  get 'users' => 'users#index'
-  get 'users/profile' => 'users#show'
+  get  'users' => 'users#index'
+  get  'users/profile' => 'users#show'
+  post 'users/:id' => 'users#save_search', as: 'profile'
 
   #routes for login, logout, sign in and sign up forms.
   # get 'login' => 'sessions#new'
