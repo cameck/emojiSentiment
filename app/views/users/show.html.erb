@@ -33,4 +33,10 @@
 </div>
 
 
-  <%= line_chart current_user.saved_search_items.group_by_day(:sentiment_score).count %>
+
+<%= javascript_tag "makeGraph(#{@saved_searches.to_json.html_safe},
+                   #{@saved_search_scores.to_json.html_safe});" %>
+                   <div data-id="<%= @saved_searches %>"
+<div id="stats" style="width: 480px; height: 400px;">
+  <!-- Plotly chart will be drawn inside this DIV -->
+</div>
