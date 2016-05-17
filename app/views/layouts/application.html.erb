@@ -27,12 +27,11 @@
                 Hello, <%= current_user.name %> <%= current_user.last_name %>
             <li><%= link_to('LOGOUT', destroy_user_session_path, :method => :delete) %></li>
             <% else %>
-            <li><%= link_to "LOG IN", new_user_session_path %></li>
-            <li><%= link_to "SIGN UP", new_user_registration_path %></li>
+            <li><a class="modal-trigger" href="#modal1">SIGN IN</a></li>
+            <li><a class="modal-trigger" href="#modal2">SIGN UP</a></li>
           <% end %>
         </ul>
     </div>
-
 
 
     <div class="content_body">
@@ -46,6 +45,22 @@
       <li>|<li>
       <li><a href="https://twitter.com/emoji_sentiment" target="_blank">Twitter</a><li>
       <li><a href="https://facebook.com/">Facebook</a><li>
+  </div>
+
+  <div id="modal1" class="modal">
+      <div class="modal-content">
+        <div>
+          <%= render file: "app/views/devise/sessions/new.html.erb" %>
+        </div>
+      </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <p>
+        test2
+      </p>
+    </div>
   </div>
 
   <p class="notice"><%= notice %></p>
