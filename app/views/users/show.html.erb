@@ -18,14 +18,9 @@
     <div id="search-box" class="search-state">
       <%= text_field_tag(:hash_tag, "&#xf002;".html_safe,
                          required: true, :class=> "searchfield") %>
-      <!-- <%= submit_tag("Search")%> -->
 ​
     </div>
   <% end %>
-</div>
-
-<div>
-  <h3> Last Search : </h3>
 </div>
 
 <br />
@@ -38,4 +33,4 @@
 </div>
 
 
-<%= line_chart SavedSearchItem.group(:sentiment_score).count %>
+  <%= line_chart current_user.saved_search_items.group_by_day(:sentiment_score).count %>
