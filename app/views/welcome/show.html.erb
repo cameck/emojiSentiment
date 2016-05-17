@@ -36,22 +36,24 @@
     </div>
 </div>
 
-<% if @tweets %>
-  <% @sentiments.each do |sentiment| %>
-  <p>
-    <%= "Sentiment Score: #{sentiment}%" %>
-  </p>
-
- <% end %>
- <%  @tweets.each do |tweet| %>
- <p>
-   <%= tweet[0][0] %><br />
-   <%= tweet[1] %>
- </p>
+<div class="single_sentiment_board">
+  <% if @tweets %>
+    <% @sentiments.zip(@tweets) do |sentiment, tweet| %>
+    <div class="container_board">
+      <p> Sentiment </p>
+      <div class="container">
+        <span class="single_emoji"><%= tweet[0][0] %></span>
+        <span class="single_emoji_sentiment"><%= sentiment %></span>
+      </div>
+      <div class="sentiment_bar">
+      </div>
+    </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
+
 </div>
 
 <div class="backarrow">
-<%= link_to "<img src='/assets/arrow-03.png' alt='arrow'>".html_safe, root_path %>
+  <%= link_to "<img src='/assets/arrow-03.png' alt='arrow'>".html_safe, root_path %>
 </div>
