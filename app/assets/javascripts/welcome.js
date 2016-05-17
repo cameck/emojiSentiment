@@ -9,4 +9,5 @@ $(document).ready(function(){
     $(this).css('font-family', 'FontAwesome');
     $(this).attr('value', $searchIcon.text() );
   });
+  $('.modal-trigger').leanModal();
 });
