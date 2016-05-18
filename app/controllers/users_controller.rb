@@ -20,7 +20,11 @@ class UsersController < ApplicationController
   end
 
   def saved_searches
-    SavedSearch.where(user_id: current_user.id)
+    if SavedSearch.where(user_id: current_user.id).blank?
+      "Sorry Nothing here"
+    else
+      SavedSearch.where(user_id: current_user.id)
+    end
   end
 
   private
