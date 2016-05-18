@@ -73,9 +73,9 @@
 
       </div>
       <% end %>
-    <% end %>
-  </div>
 
+  </div>
+<% end %>
   <div class="single_sentiment_board_description">
     <p>Emoji Ocurrences <i class="fa fa-twitter" aria-hidden="true"></i></p>
     <div class="row">
@@ -83,11 +83,13 @@
         Emoji Name <span>unicode</span>
       </span>
       <span class="agregate_sentiment_description">
-        <%= @tweets[0][1] %>
+        <%= @tweets[0][1] if @tweets[0] %>
       </span>
     </div>
       <div class="description_links">
-        <span>Emoji sentiment based on: <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144296" target="_blank">Emoji Sentiment Ranking 1.0</a><span>
+        <span>Emoji sentiment based on:
+           <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144296" target="_blank">
+             Emoji Sentiment Ranking 1.0</a><span>
         <span class="sentiment_color">
           <span class="c_1">0 = Negativity <i class="fa fa-circle" aria-hidden="true"></i></span>
           <span class="c_2">50 = Neutrality <i class="fa fa-circle" aria-hidden="true"></i></span>
