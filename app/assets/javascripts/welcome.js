@@ -13,18 +13,16 @@ $(document).ready(function(){
 
 
   $(document).on({
-      // When ajaxStart is fired, add 'loading' to body class
+      // When ajaxStart is fired, add 'loading' to body class - will stop once new page loads
       ajaxStart: function() {
           $("body").addClass("loading");
       }
-
   });
 
-  // Initiates an AJAX request on pressing enter
+  // Initiates an AJAX request on pressing enter on home page twitter request
   $(document).keypress(function(e){
     var key = e.which;
-    if (key == 13) {
-      console.log("YOLO");
+    if ( key == 13 && $.trim($("#hash_tag").val()) ) {
       $.post("/index/");
     }
   });
