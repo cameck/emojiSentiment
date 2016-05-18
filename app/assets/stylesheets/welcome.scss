@@ -64,16 +64,6 @@ button[type="submit"] {
 
 }
 
-.search-state::after {
-  // content: "\f002";
-  // font-family: FontAwesome;
-  // right: 140px;
-  // position: absolute;
-  // top: 4px;
-}
-
-
-
 .searchfield {
   -webkit-transition: all .8s;
   transition: all .8s;
@@ -85,4 +75,45 @@ button[type="submit"] {
 .searchfield:focus {
   width: 55%;
   color: #000;
+}
+
+
+// Preloader CSS
+
+
+.circle-clipper .circle {
+  border-width: 1px;
+}
+.preloader-wrapper.active {
+  margin: 40vh auto 7vh auto;
+  display: block;
+}
+
+.preloader-container {
+  height: 100vh;
+  width: 100vw;
+  background: #f2f2f2;
+  position: absolute;
+  z-index: 500;
+  display: none;
+}
+
+.spinner-layer {
+  border-color: #000;
+}
+
+.preloader-container h5 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .preloader-container {
+    display: block;
 }
