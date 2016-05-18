@@ -23,4 +23,4 @@ test:
 production:
   adapter: postgresql
   <<: *default
-  database: emoojisentiment
+  database: emojisentiment
