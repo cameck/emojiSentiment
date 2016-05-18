@@ -74,7 +74,9 @@ class TwitterBot < ActiveRecord::Base
     total_sentiment.each do |total_sentiment|
       score += total_sentiment
     end
-    '%.2f' % (score / total_occurences)
+    if total_occurences && !total_occurences.zero?
+      '%.2f' % (score / total_occurences)
+    end
   end
 
   def calc_total_aggregate_tweets(tweets)
