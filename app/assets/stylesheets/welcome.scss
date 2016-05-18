@@ -67,16 +67,31 @@ button[type="submit"] {
 .searchfield {
   -webkit-transition: all .8s;
   transition: all .8s;
-  width: 50%;
+  width: 430%;
   font-family: FontAwesome;
   color: #b2b2b2;
 }
 
 .searchfield:focus {
-  width: 55%;
+  width: 65%;
   color: #000;
 }
 
+input[type=text] {
+  width: 55%;
+  background-color: white;
+  border-bottom: none;
+  padding-left: 1.1em;
+  box-sizing: border-box;
+  font-weight: 100;
+  height: 2.6rem;
+}
+
+.landingsearch input[type=text]:focus:not([readonly]) {
+  box-shadow: none;
+  border-bottom: none;
+  width: 75%;
+}
 
 // Preloader CSS
 
