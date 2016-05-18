@@ -10,4 +10,23 @@ $(document).ready(function(){
     $(this).attr('value', $searchIcon.text() );
   });
   $('.modal-trigger').leanModal();
+
+
+  $(document).on({
+      // When ajaxStart is fired, add 'loading' to body class
+      ajaxStart: function() {
+          $("body").addClass("loading");
+      }
+
+  });
+
+  // Initiates an AJAX request on pressing enter
+  $(document).keypress(function(e){
+    var key = e.which;
+    if (key == 13) {
+      console.log("YOLO");
+      $.post("/index/");
+    }
+  });
+
 });

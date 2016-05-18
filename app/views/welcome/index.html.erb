@@ -1,3 +1,19 @@
+<div class="preloader-container">
+<div class="preloader-wrapper active">
+
+  <div class="spinner-layer spinner-black-only">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+  </div>
+</div>
+<h5>We're Crunching the Numbers For You</h5>
+</div>
+
 <div class="descriptionlanding">
   <div class="logo">
     <img src="/assets/emojisentiment_logo-02.png" alt="EmojiSentiment_logo">
@@ -20,8 +36,7 @@
       <div id="search-box" class="search-state">
         <%= text_field_tag(:hash_tag, "&#xf002;".html_safe,
                            required: true, :class=> "searchfield") %>
-        <!-- <%= submit_tag("Search")%> -->
-​
+
       </div>
     <% end %>
   </div>
