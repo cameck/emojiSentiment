@@ -1,7 +1,7 @@
 <h2>Sign up</h2>
 
-<%= form_for(:user, :url => new_user_registration_path(:user)) do |f| %>
-
+<div>
+<%= form_for(:user, :url => new_user_registration_path) do |f| %>
   <%= f.label :name %><br />
   <%= f.text_field :name, autofocus: true, required: true %>
   <%= f.label :last_name %><br />
@@ -18,5 +18,5 @@
   <%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation, autocomplete: "off" %>
   <%= f.submit "Sign up" %>
-
 <% end %>
+</div>
