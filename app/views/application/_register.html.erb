@@ -1,0 +1,22 @@
+<h2>Sign up</h2>
+
+<%= form_for(:user, :url => new_user_registration_path(:user)) do |f| %>
+
+  <%= f.label :name %><br />
+  <%= f.text_field :name, autofocus: true, required: true %>
+  <%= f.label :last_name %><br />
+  <%= f.text_field :last_name, required: true %>
+  <%= f.label :company_name %><br />
+  <%= f.text_field :company_name %>
+  <%= f.label :email %><br />
+  <%= f.email_field :email, required: true %>
+  <%= f.label :password %>
+  <% if @minimum_password_length %>
+  <em>(<%= @minimum_password_length %> characters minimum)</em>
+  <% end %><br />
+  <%= f.password_field :password, autocomplete: "off" %>
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <%= f.submit "Sign up" %>
+
+<% end %>
