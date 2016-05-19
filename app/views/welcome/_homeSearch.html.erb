@@ -1,0 +1,29 @@
+
+
+<div class="descriptionlanding">
+  <div class="logo">
+    <img src="/assets/emojisentiment_logo-02.png" alt="EmojiSentiment_logo">
+  </div>
+  <div class="description">
+    <p>
+      Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
+      twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag
+​
+      Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,  truffaut meh
+      twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled f
+    </p>
+  </div>
+
+
+
+  <div class="landingsearch">
+    <%= form_tag search_path do %>
+      <%= label_tag(:hash_tag, "") %>
+      <div id="search-box" class="search-state">
+        <%= text_field_tag(:hash_tag, "&#xf002;".html_safe,
+                           required: true, :class=> "searchfield") %>
+
+      </div>
+    <% end %>
+  </div>
+</div>
