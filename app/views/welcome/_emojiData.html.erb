@@ -2,6 +2,17 @@
   <p>Emoji Ocurrences <i class="fa fa-twitter" aria-hidden="true"></i></p>
   <div class="row">
     <span class="sentiment_description">
+      <% @emoji_names.each do |emoji_name| %>
+        <p>
+          <%= emoji_name %>
+        </p>
+      <% end %>
+
+      <% @emoji_unicodes.each do |emoji_unicode|  %>
+      <p>
+        <%= emoji_unicode %>
+      </p>
+      <% end  %>
       Emoji Name <span>unicode</span>
     </span>
     <span class="agregate_sentiment_description">

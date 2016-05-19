@@ -1,5 +1,6 @@
 class TwitterBot < ActiveRecord::Base
 
+
   def client
     # Initialize Twitter Authentication
     @client ||= Twitter::REST::Client.new do |config|
@@ -26,6 +27,7 @@ class TwitterBot < ActiveRecord::Base
       text = search_item.text
 
       EmojiData.scan(text).each do |ec|
+        # Save Emoji, Emoji name and Emoji Unicode in Array
         tweets << ec.chars
       end
     end
@@ -46,7 +48,7 @@ class TwitterBot < ActiveRecord::Base
 
   def top_three_emojis(tweet_counts)
     # sort tweets to top 3 emojis
-    sorted_tweets = tweet_counts.sort_by {|_key, value| value}
+    sorted_tweets = tweet_counts.sort_by { |_key, value| value }
     sorted_tweets = sorted_tweets.last(3).reverse
   end
 
@@ -86,5 +88,33 @@ class TwitterBot < ActiveRecord::Base
       aggregate_tweet_number += tweet[1]
     end
     aggregate_tweet_number
+  end
+
+  def get_emoji_name(emojis)
+    unpacked_emojis = unpack_emojis(emojis)
+
+    emoji_names = []
+    EmojiData.scan(unpacked_emojis).each do |ec|
+      emoji_names << ec.name
+    end
+    emoji_names
+  end
+
+  def get_unicodes(emojis)
+    unpacked_emojis = unpack_emojis(emojis)
+
+    emoji_unicodes = []
+    EmojiData.scan(unpacked_emojis).each do |ec|
+      emoji_unicodes << ec.unified
+    end
+    emoji_unicodes
+  end
+
+  def unpack_emojis(emojis)
+    unpacked_emojis = []
+    emojis.each do |emoji|
+      unpacked_emojis << emoji[0][0]
+    end
+    unpacked_emojis = unpacked_emojis.join
   end
 end

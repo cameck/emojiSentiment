@@ -16,6 +16,8 @@ class WelcomeController < ApplicationController
       @total_aggregate_tweets = tweets.calc_total_aggregate_tweets(@tweets)
       @sentiments = tweets.get_sentiment(@tweets)
       @average_sentiment = tweets.calc_average_sentiment(@tweets, @sentiments)
+      @emoji_names = tweets.get_emoji_name(@tweets)
+      @emoji_unicodes = tweets.get_unicodes(@tweets)
     end
   end
 
