@@ -11,19 +11,21 @@
 <% if @tweets && @tweets[0] && @sentiments.all? { |sentiment| sentiment } %>
   <%= render 'tweet_totals' %>
   <%= render 'tweet_singles' %>
+
+  <div id="topEmoji">
+      <%= render 'topEmoji' %>
+  </div>
+
+  <div id="secondPlaceEmoji">
+      <%= render 'secondPlaceEmoji' %>
+  </div>
+
+  <div id="thirdPlaceEmoji">
+      <%= render 'thirdPlaceEmoji' %>
+  </div>
+  
 <% end  %>
 
-<div id="topEmoji">
-    <%= render 'topEmoji' %>
-</div>
-
-<div id="secondPlaceEmoji">
-    <%= render 'secondPlaceEmoji' %>
-</div>
-
-<div id="thirdPlaceEmoji">
-    <%= render 'thirdPlaceEmoji' %>
-</div>
 
   <!-- <div class="agregate_sentiment_board_description">
     <p>Agregate Sentiment</p>
