@@ -1,0 +1,27 @@
+<div class="agregate_sentiment_board">
+  <p>Aggregate Emoji Ocurrences <i class="fa fa-twitter" aria-hidden="true"></i></p>
+  <div class="row">
+    <span class="agregate_sentiment">
+      Aggregate Emoji Sentiment: <span><%= "#{@average_sentiment}" %></span>
+    </span>
+    <span class="agregate_total_tweets">
+      <%= @total_aggregate_tweets %>
+    </span>
+  </div>
+  <div class="sentiment_bar">
+    <i class="fa fa-caret-up" aria-hidden="true" style="margin-left:<%= @average_sentiment %>%;"></i>
+  </div>
+  <div class="numbers">
+    <span>0</span>
+    <span>|</span>
+    <span>|</span>
+    <span>|</span>
+    <span>|</span>
+    <span>50</span>
+    <span>|</span>
+    <span>|</span>
+    <span>|</span>
+    <span>|</span>
+    <span>100</span>
+  </div>
+</div>
