@@ -98,7 +98,15 @@ class TwitterBot < ActiveRecord::Base
     EmojiData.scan(unpacked_emojis).each do |ec|
       emoji_names << ec.name
     end
-    emoji_names
+    correct_capitalization(emoji_names)
+  end
+
+  def correct_capitalization(emoji_names)
+    emoji_capital_names = []
+    emoji_names.each do |emoji_name|
+    emoji_capital_names << emoji_name.split.map(&:capitalize).join(' ')
+    end
+    emoji_capital_names
   end
 
   def get_unicodes(emojis)

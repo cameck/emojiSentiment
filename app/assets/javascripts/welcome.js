@@ -26,24 +26,25 @@ $(document).ready(function(){
       $.post("/index/");
     }
   });
-
+  //Hide Detailed emoji data on page load
   $('#topEmoji').hide();
   $('#secondPlaceEmoji').hide();
   $('#thirdPlaceEmoji').hide();
 
+  // Hide and Show Emoji data depending on click location
   $('#sentiment-0').click(function() {
     $('#secondPlaceEmoji').slideUp();
     $('#thirdPlaceEmoji').slideUp();
-    $('#topEmoji').slideDown();
+    $('#topEmoji').slideToggle();
   });
   $('#sentiment-1').click(function() {
     $('#topEmoji').slideUp();
     $('#thirdPlaceEmoji').slideUp();
-    $('#secondPlaceEmoji').slideDown();
+    $('#secondPlaceEmoji').slideToggle();
   });
   $('#sentiment-2').click(function() {
     $('#topEmoji').slideUp();
     $('#secondPlaceEmoji').slideUp();
-    $('#thirdPlaceEmoji').slideDown();
+    $('#thirdPlaceEmoji').slideToggle();
   });
 });
