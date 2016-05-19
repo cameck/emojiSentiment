@@ -2,7 +2,7 @@
   <p>Emoji Ocurrences <i class="fa fa-twitter" aria-hidden="true"></i></p>
   <div class="row">
     <span class="sentiment_description">
-      <%= @emoji_names[1] %> <span><%= @emoji_unicodes[1] %></span>
+      <%= @emoji_names[1] %> <span><%= @emoji_unicodes[1] if @emoji_unicodes[1] %></span>
     </span>
     <span class="agregate_sentiment_description">
       <%= @tweets[1][1] %>
