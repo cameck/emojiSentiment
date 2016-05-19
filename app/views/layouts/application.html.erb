@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>EmojiSentiment</title>
+
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="https://use.typekit.net/zrc0tqc.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -10,6 +11,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.css"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.css"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.css.map"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.easings.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.slimscroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.slimscroll.min.js"></script>
+
 </head>
 
 <body>
@@ -47,7 +57,7 @@
       <li><a href="https://facebook.com/">Facebook</a><li>
   </div>
 
-  <div id="modal1" class="modal">
+  <!-- <div id="modal1" class="modal">
       <div class="modal-content">
         <div>
           <%= render partial: 'login.html.erb' %>
@@ -61,7 +71,7 @@
         <%= render partial: 'register.html.erb' %>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

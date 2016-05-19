@@ -1,6 +1,6 @@
 //Hide and show the search icon on click for the home page search box
 $(document).ready(function(){
-  $('.modal-trigger').leanModal();
+  $('#fullpage').fullpage();
   $(".searchfield").focus(function() {
       $(this).attr('value', "");
       $(this).css('font-family', 'proxima-nova, sans-serif');
