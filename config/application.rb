@@ -22,7 +22,7 @@ module EmojiSentiment
     config.action_mailer.smtp_settings = {
       address: "smtp.gmail.com",
       port: 587,
-      domain: "<example.tld>",
+      domain: "gmail.com",
       user_name: "emojisentiment@gmail.com",
       password: "emojich9",
       authentication: :plain,
