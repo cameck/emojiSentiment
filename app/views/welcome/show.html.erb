@@ -8,7 +8,7 @@
       twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag next level brunch
     </p>
   </div>
-<% if @tweets && @sentiments.all? { |sentiment| sentiment } # Handles the Trump Problem %>
+<% if @tweets && @tweets[0] && @sentiments.all? { |sentiment| sentiment } %>
   <%= render 'tweet_totals' %>
   <%= render 'tweet_singles' %>
   <%= render 'emojiData' %>

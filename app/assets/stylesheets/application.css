@@ -32,6 +32,7 @@
    background-color: #FDD700;
    position: relative;
    text-align: center;
+   padding-bottom: .2em;
  }
 
  .header .navigation a {
@@ -60,13 +61,13 @@
 
  .header a:hover {
    color: black;
-   padding-bottom: .7em;
+   padding-bottom: .9em;
    border-bottom: .3em solid black;
  }
 
  .header .sign_up_out li:last-child a {
    background-color: black;
-   padding: 1.1em 2em .9em 2em;
+   padding: 1.1em 2em 1.15em 2em;
  }
 
  .header .sign_up_out li:last-child a:hover {
