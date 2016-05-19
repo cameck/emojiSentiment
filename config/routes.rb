@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get  'users' => 'users#index'
   get  'users/profile' => 'users#show'
   post 'users/:id' => 'users#save_search', as: 'profile'
+  get 'contact', to: 'messages#new', as: 'contact'
+  post 'contact', to: 'messages#create'
 
   #routes for login, logout, sign in and sign up forms.
   # get 'login' => 'sessions#new'
