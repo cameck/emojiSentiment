@@ -1,6 +1,7 @@
 <div class="single_sentiment_board">
+    <% counter = 0  %>
     <% @sentiments.zip(@tweets) do |sentiment, tweet| %>
-      <div class="container_board">
+      <div class="container_board" id="sentiment-<%= counter %>">
         <p> Emoji Sentiment </p>
         <div class="row">
           <span class="single_emoji"><%= tweet[0][0] %></span>
@@ -10,5 +11,6 @@
           <i class="fa fa-caret-up" aria-hidden="true" style="margin-left:<%= sentiment %>%;"></i>
         </div>
       </div>
+      <% counter += 1  %>
     <% end %>
 </div>

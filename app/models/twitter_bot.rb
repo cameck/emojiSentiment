@@ -13,6 +13,7 @@ class TwitterBot < ActiveRecord::Base
 
   def search(input)
     # GET Twitter hashtag search Results
+    input = URI.encode(input)
     search = client.search("##{input}", result_type: "recent").take(500)
     emoji_scan(search)
     rescue

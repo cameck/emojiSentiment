@@ -26,4 +26,24 @@ $(document).ready(function(){
       $.post("/index/");
     }
   });
+
+  $('#topEmoji').hide();
+  $('#secondPlaceEmoji').hide();
+  $('#thirdPlaceEmoji').hide();
+
+  $('#sentiment-0').click(function() {
+    $('#secondPlaceEmoji').slideUp();
+    $('#thirdPlaceEmoji').slideUp();
+    $('#topEmoji').slideDown();
+  });
+  $('#sentiment-1').click(function() {
+    $('#topEmoji').slideUp();
+    $('#thirdPlaceEmoji').slideUp();
+    $('#secondPlaceEmoji').slideDown();
+  });
+  $('#sentiment-2').click(function() {
+    $('#topEmoji').slideUp();
+    $('#secondPlaceEmoji').slideUp();
+    $('#thirdPlaceEmoji').slideDown();
+  });
 });

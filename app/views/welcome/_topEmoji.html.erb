@@ -1,0 +1,21 @@
+<div class="single_sentiment_board_description">
+  <p>Emoji Ocurrences <i class="fa fa-twitter" aria-hidden="true"></i></p>
+  <div class="row">
+    <span class="sentiment_description">
+      <%= @emoji_names[0] %> <span><%= @emoji_unicodes[0] %></span>
+    </span>
+    <span class="agregate_sentiment_description">
+      <%= @tweets[0][1] %>
+    </span>
+  </div>
+  <div class="description_links">
+    <span>Emoji sentiment based on:
+      <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144296" target="_blank">
+        Emoji Sentiment Ranking 1.0</a><span>
+          <span class="sentiment_color">
+            <span class="c_1">0 = Negativity <i class="fa fa-circle" aria-hidden="true"></i></span>
+            <span class="c_2">50 = Neutrality <i class="fa fa-circle" aria-hidden="true"></i></span>
+            <span class="c_3">100 = Positivity <i class="fa fa-circle" aria-hidden="true"></i></span>
+          </span>
+        </div>
+      </div>

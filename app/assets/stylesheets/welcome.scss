@@ -132,3 +132,7 @@ body.loading {
 body.loading .preloader-container {
     display: block;
 }
+
+#sentiment-0:hover, #sentiment-1:hover, #sentiment-2:hover {
+  cursor: pointer;
+}
