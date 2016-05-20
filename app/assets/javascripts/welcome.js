@@ -23,6 +23,7 @@ $(document).ready(function(){
   $(document).keypress(function(e){
     var key = e.which;
     if ( key == 13 && $.trim($("#hash_tag").val()) ) {
+      $('#fp-nav').hide('slow');
       $.post("/index/");
     }
   });
@@ -65,7 +66,7 @@ $(document).ready(function(){
     });
   });
 
-  
+  // fade in Pages
   $('#show-page').fadeIn(1000);
   $('#fullpage').fadeIn(2000);
 });

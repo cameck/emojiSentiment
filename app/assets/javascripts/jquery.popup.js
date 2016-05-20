@@ -17,6 +17,10 @@
 	 */
 	$.fn.popup = function(settings){
 
+		var preloaderContent = '<div class="preloader-container">' +
+													 '<div class="loader-and-text">'	+
+													 '<div class="loader"></div> </div>' +
+		    							 		 '</div>'
 		var selector = this.selector,
 			popup = new $.Popup(settings);
 
@@ -61,7 +65,7 @@
 				closeContent : '<div class="popup_close">&times;</div>',
 				markup : '<div class="popup"><div class="popup_content"/></div>',
 				contentClass : 'popup_content',
-				preloaderContent : '<p class="preloader">Loading</p>',
+				preloaderContent : 'preloaderContent',
 				activeClass : 'popup_active',
 				hideFlash : false,
 				speed : 200,
