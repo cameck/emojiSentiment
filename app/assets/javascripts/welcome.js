@@ -54,15 +54,14 @@ $(document).ready(function(){
   $('.agregate_sentiment_board').popup(options);
 
   //counter animation
-  $('.count').each(function () {
-    $(this).prop('Counter',0).animate({
-      Counter: $(this).text()
-    }, {
-        duration: 3000,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
+    $('.count').each(function () {
+    var $this = $(this);
+    jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+      duration: 1000,
+      easing: 'swing',
+      step: function () {
+  		  $this.text(this.Counter.toFixed(2));
+		  }
     });
   });
 });
