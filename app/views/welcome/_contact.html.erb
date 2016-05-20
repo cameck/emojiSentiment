@@ -1,3 +1,21 @@
-<div>
-  This is the contact page!
-</div>
+<h2>Contact Us</h2>
+
+<%= form_for(:message, url: contact_path) do |message_form| %>
+
+    <div class="field">
+      <%= message_form.text_field :name, placeholder: "Name" %>
+    </div>
+
+    <div class="field">
+      <%= message_form.email_field :email, placeholder: "Email"%>
+    </div>
+
+    <div class="field">
+      <%= message_form.text_area :content, placeholder: "Message"%>
+    </div>
+
+    <div class="field">
+      <%= message_form.submit "Send" %>
+    </div>
+
+<% end %>
