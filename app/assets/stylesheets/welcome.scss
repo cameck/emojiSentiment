@@ -6,14 +6,16 @@
 /*_________ LAYOUT __________*/
 
 .descriptionlanding {
-  height: 85%;
+  // height: 85%;
   width: 45%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  margin: auto;
+  // padding-top: 17%;
+  // // position: absolute;
+  // right: 0;
+  // bottom: 0;
+  // top: 0;
+  // left: 0;
+  // height: 30vh;
+  margin: 30vh auto;
 }
 
 
@@ -271,4 +273,9 @@ div.popup {
 	margin: -10px 0 0 -25px;
 	position: fixed;
 	top: 50%;
+}
+
+#fullpage,
+#show-page {
+  display: none;
 }

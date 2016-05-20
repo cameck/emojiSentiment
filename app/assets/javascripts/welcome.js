@@ -65,4 +65,8 @@ $(document).ready(function(){
         }
     });
   });
+
+  
+  $('#show-page').fadeIn(1000);
+  $('#fullpage').fadeIn(2000);
 });
