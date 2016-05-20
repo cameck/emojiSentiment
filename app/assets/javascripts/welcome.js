@@ -2,8 +2,8 @@
 $(document).ready(function(){
   $('#fullpage').fullpage();
   $(".searchfield").focus(function() {
-      $(this).attr('value', "");
-      $(this).css('font-family', 'proxima-nova, sans-serif');
+    $(this).attr('value', "");
+    $(this).css('font-family', 'proxima-nova, sans-serif');
   }).blur(function() {
     var searchIcon = "&#xf002;";
     var $searchIcon = $($.parseHTML(searchIcon));
@@ -13,10 +13,10 @@ $(document).ready(function(){
 
 
   $(document).on({
-      // When ajaxStart is fired, add 'loading' to body class - will stop once new page loads
-      ajaxStart: function() {
-          $("body").addClass("loading");
-      }
+    // When ajaxStart is fired, add 'loading' to body class - will stop once new page loads
+    ajaxStart: function() {
+      $("body").addClass("loading");
+    }
   });
 
   // Initiates an AJAX request on pressing enter on home page twitter request
@@ -47,4 +47,8 @@ $(document).ready(function(){
     $('#secondPlaceEmoji').slideUp();
     $('#thirdPlaceEmoji').slideToggle();
   });
+  // Popup for show page
+  $('#sentiment-data-popup').hide();
+  var options = { content : $('#sentiment-data-popup') };
+  $('.agregate_sentiment_board').popup(options);
 });
