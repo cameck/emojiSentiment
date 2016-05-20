@@ -96,9 +96,6 @@ input[type=text] {
 // Preloader CSS
 
 
-.circle-clipper .circle {
-  border-width: 1px;
-}
 .preloader-wrapper.active {
   margin: 40vh auto 7vh auto;
   display: block;
@@ -133,6 +130,141 @@ body.loading .preloader-container {
     display: block;
 }
 
-#sentiment-0:hover, #sentiment-1:hover, #sentiment-2:hover {
+//Preloading Animation
+
+.loader-and-text {
+  margin: 40vh;
+}
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: '';
+}
+.loader:before {
+  width: 5.1em;
+  height: 15.2em;
+  background: #F2F2F2;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.2em 5.1em;
+  transform-origin: 5.2em 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+.loader {
+  color: #000;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 55px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 1em 0 0 10em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:after {
+  width: 5.1em;
+  height: 15.2em;
+  background: #f2f2f2;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 5.1em;
+  -webkit-transform-origin: 0px 5.1em;
+  transform-origin: 0px 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+// For Sentiment boxes on Results page
+#sentiment-0:hover,
+#sentiment-1:hover,
+#sentiment-2:hover,
+.agregate_sentiment_board:hover {
   cursor: pointer;
+}
+
+
+/*-------------------------------
+	POPUP.CSS
+-------------------------------*/
+
+.popup_back {
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+.popup_cont {
+	position: fixed;
+	z-index: 102;
+}
+
+.preloader {
+	z-index: 101;
+}
+
+/*---------------------
+	ONLY EDIT BELOW
+*/
+
+.popup_close {
+	color: #888;
+	cursor: pointer;
+	position: absolute;
+	padding: 5px;
+	right: 5px;
+	top: 0;
+}
+
+.popup_close:hover {
+	color: #111;
+}
+
+.popup_back {
+	cursor: pointer;
+	background-color: #222;
+}
+
+div.popup {
+	background: #fff;
+	padding: 25px;
+	box-shadow: 0 3px 10px #222;
+}
+
+.preloader {
+	left: 50%;
+	margin: -10px 0 0 -25px;
+	position: fixed;
+	top: 50%;
 }
