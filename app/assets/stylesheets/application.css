@@ -66,6 +66,12 @@
    border-bottom: .3em solid black;
  }
 
+ .header a.active {
+   color: black;
+   padding-bottom: .9em;
+   border-bottom: .3em solid black;
+ }
+
  .header .sign_up_out li:last-child a {
    background-color: black;
    padding: 1.1em 2em 1.15em 2em;

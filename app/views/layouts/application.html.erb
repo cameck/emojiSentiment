@@ -37,17 +37,17 @@
   <div class="wrap">
     <div class="header">
         <ul class="navigation">
-          <li><a href="#Home">HOME</a></li>
-          <li><a href="#Why">WHY</a></li>
-          <li><a href="#About">ABOUT</a></li>
-          <li><a href="#Contact">CONTACT</a></li>
+          <li><a href="#Home" class="home">HOME</a></li>
+          <li><a href="#Why" class="why">WHY</a></li>
+          <li><a href="#About" class="about">ABOUT</a></li>
+          <li><a href="#Contact" class="contact">CONTACT</a></li>
 
           <!-- <li><%= link_to 'HOME', root_path %></li>
           <li><%= link_to 'WHY', root_path %></li>
           <li><%= link_to 'ABOUT', root_path %></li>
           <li><%= link_to 'CONTACT', root_path %></li> -->
         </ul>
-        <ul class="sign_up_out">
+        <!-- <ul class="sign_up_out">
           <% if user_signed_in? %>
                 Hello, <%= current_user.name %> <%= current_user.last_name %>
             <li><%= link_to('LOG OUT', destroy_user_session_path, :method => :delete) %></li>
@@ -55,16 +55,16 @@
             <li><a class="modal-trigger" href="#modal1">LOG IN</a></li>
             <li><a class="modal-trigger" href="#modal2">SIGN UP</a></li>
           <% end %>
-        </ul>
+        </ul> -->
     </div>
 
 <div class="side_navnav">
     <div id="fp-nav" class="right" style="margin-top: -33.5px;">
       <ul>
-        <li><a href="#Home" class=""><span></span></a><div class="fp-tooltip right">HOME</div></li>
-        <li><a href="#Why" class=""><span></span></a><div class="fp-tooltip right">WHY</div></li>
-        <li><a href="#About" class=""><span></span></a><div class="fp-tooltip right">ABOUT</div></li>
-        <li><a href="#Contact" class=""><span></span></a><div class="fp-tooltip right">CONTACT</div></li>
+        <li><a href="#Home" class="home"><span></span></a><div class="fp-tooltip right">HOME</div></li>
+        <li><a href="#Why" class="why"><span></span></a><div class="fp-tooltip right">WHY</div></li>
+        <li><a href="#About" class="about"><span></span></a><div class="fp-tooltip right">ABOUT</div></li>
+        <li><a href="#Contact" class="contact"><span></span></a><div class="fp-tooltip right">CONTACT</div></li>
       </ul>
     </div>
   </div>

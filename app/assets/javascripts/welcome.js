@@ -56,14 +56,46 @@ $(document).ready(function(){
   //counter animation
   $('.count').each(function () {
     $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
+      Counter: $(this).text()
     }, {
-        duration: 5500,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
+      duration: 5500,
+      easing: 'swing',
+      step: function (now) {
+        $(this).text(Math.ceil(now));
+      }
     });
   });
+
+  // Toggle active links
+
+  function checkForChanges() {
+    if ($('body').hasClass('fp-viewing-Home')) {
+      $('.why').removeClass('active');
+      $('.about').removeClass('active');
+      $('.contact').removeClass('active');
+      $('.home').addClass('active');
+    } else if ($('body').hasClass('fp-viewing-Why')) {
+      $('.home').removeClass('active');
+      $('.about').removeClass('active');
+      $('.contact').removeClass('active');
+      $('.why').addClass('active');
+    } else if ($('body').hasClass('fp-viewing-About')) {
+      $('.why').removeClass('active');
+      $('.home').removeClass('active');
+      $('.contact').removeClass('active');
+      $('.about').addClass('active');
+    } else if ($('body').hasClass('fp-viewing-Contact')) {
+      $('.about').removeClass('active');
+      $('.why').removeClass('active');
+      $('.home').removeClass('active');
+      $('.contact').addClass('active');
+    } else {
+      setTimeout(checkForChanges, 500);
+    };
+    console.log("running")
+    setTimeout(checkForChanges, 500);
+  };
+
+  checkForChanges();
 
 });
