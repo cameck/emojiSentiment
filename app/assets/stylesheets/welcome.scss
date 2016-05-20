@@ -56,6 +56,10 @@ button[type="submit"] {
 }
 
 // Center and add search icon to search box
+
+:focus {
+  outline: -webkit-focus-ring-color auto 0;
+}
 #search-box {
   text-align: center;
   position: relative;
