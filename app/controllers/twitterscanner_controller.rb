@@ -22,7 +22,7 @@ class TwitterscannerController < ApplicationController
       twitter_bot = TwitterBot.new()
       tweets = twitter_bot.search(hashtag)
       if tweets
-        sentiments = tweets.get_sentiment(tweets)
+        sentiments = twitter_bot.get_sentiment(tweets)
         tweet_at_user = "@#{user_name} Top 3 emojis & their associated sentiment #{tweets[0][0][0]}=#{sentiments[0]} #{tweets[1][0][0]}=#{sentiments[1]} #{tweets[2][0][0]}=#{sentiments[2]} | More info @ http://bit.ly/1qBqqJv (edited)"
         p "Tweet to send: #{tweet_at_user}"
         p client.update(tweet_at_user)
