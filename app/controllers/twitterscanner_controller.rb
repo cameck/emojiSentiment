@@ -27,9 +27,9 @@ class TwitterscannerController < ApplicationController
         p "Tweet to send: #{tweet_at_user}"
         p client.update(tweet_at_user)
       end
-    rescue
-      render :nothing => true, :status => 500
-      return
+    # rescue
+    #   render :nothing => true, :status => 500
+    #   return
     end
 
     render :nothing => true, :status => :ok
