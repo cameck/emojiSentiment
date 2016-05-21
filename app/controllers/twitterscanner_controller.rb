@@ -26,7 +26,7 @@ class TwitterscannerController < ApplicationController
       client.update(tweet_at_user)
 
     rescue
-      render :nothing => true, :status => :500
+      render :nothing => true, :status => 500
     end
 
     render :nothing => true, :status => :ok
