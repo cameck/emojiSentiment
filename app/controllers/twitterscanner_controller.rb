@@ -5,8 +5,11 @@ class TwitterscannerController < ApplicationController
 
     begin
       user_request = params[:twitterscanner]
+      p "USER REQUEST: #{user_request}"
       user_name = user_request[:name]
+      p "USER NAME: #{user_name}"
       user_tweet = user_request[:text]
+      p "USER TWEET: #{user_tweet}"
       user_tweet = user_tweet.split
       hashtag = ""
 
@@ -15,7 +18,7 @@ class TwitterscannerController < ApplicationController
           hashtag = t
         end
       end
-
+      p "HASH TAG: #{hashtag}"
       twitter_bot = TwitterBot.new()
       tweets = twitter_bot.search(hashtag)
       if tweets
