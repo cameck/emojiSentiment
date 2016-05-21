@@ -7,8 +7,7 @@ skip_before_action :verify_authenticity_token
   end
 
   def response
-    @response = HTTParty.get("http://intense-coast-35405.herokuapp.com/process-request")
-    p response
+    @response = request.raw_post
   end
 
 end
