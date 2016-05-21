@@ -58,7 +58,7 @@ $(document).ready(function(){
     $('.count').each(function () {
     var $this = $(this);
     jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
-      duration: 900,
+      duration: 1000,
       easing: 'swing',
       step: function () {
   		  $this.text(this.Counter.toFixed(2));
@@ -70,7 +70,7 @@ $(document).ready(function(){
   $('.progress-caret').each(function () {
   var $this = $(this);
   var marginSize = parseFloat($this[0].nextSibling.innerText);
-  $($this).animate({ marginLeft:  marginSize + "%" }, 2000, "swing");
+  $($this).animate({ marginLeft:  marginSize + "%" }, 1000, "swing");
 });
 
 
