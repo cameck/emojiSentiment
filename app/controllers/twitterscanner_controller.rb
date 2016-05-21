@@ -27,12 +27,10 @@ class TwitterscannerController < ApplicationController
 
     rescue
       render :nothing => true, :status => 500
+      return
     end
 
     render :nothing => true, :status => :ok
-  end
-
-  def response
   end
 
 end
