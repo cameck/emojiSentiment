@@ -284,8 +284,33 @@
 }
 
 
-// Hide Sentiment Score 
+// Hide Sentiment Score
 
 .sentiment-number {
   display: none;
+}
+
+// Sentiment Description Carets
+
+.single_sentiment_board_description {
+  margin-top: 0;
+}
+.description-caret {
+  color: #fff;
+  line-height: 25% !important;
+  font-size: 2.5em !important;
+}
+
+.description-sub {
+  bottom: -.85em;
+}
+
+#first-description {
+  margin-left: 14.2%;
+}
+#second-description {
+  margin-left: 49.2%;
+}
+#third-description {
+  margin-left: 84.2%;
 }
