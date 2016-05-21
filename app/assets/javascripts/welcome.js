@@ -66,6 +66,15 @@ $(document).ready(function(){
     });
   });
 
+// traingle animation
+  $('.fa-caret-up').each(function () {
+  var $this = $(this);
+  var marginSize = parseFloat($this[0].nextSibling.innerText);
+  // console.log($this);
+  $($this).animate({ marginLeft:  marginSize + "%" }, 2000, "swing");
+});
+
+
   // fade in Pages
   $('#show-page').fadeIn(1000);
   $('#fullpage').fadeIn(2000);
