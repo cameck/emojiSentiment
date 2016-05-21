@@ -219,3 +219,24 @@
 .side_navnav {
   padding-right: 10em;
 }
+
+
+/*___________________________*/
+/*_________ center / middle / content __________*/
+
+
+.fp-tableCell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.section {
+    text-align: center;
+}
+
+
+.fp-section.fp-table, .fp-slide.fp-table {
+    display: table;
+    table-layout:fixed;
+    width: 100%;
+}
