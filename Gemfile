@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 
-
+#HTTParty
+gem 'httparty'
 # Schedule Cron Jobs
 gem 'whenever', :require => false
 # user login
