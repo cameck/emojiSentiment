@@ -14,7 +14,7 @@ class TwitterscannerController < ApplicationController
       hashtag = ""
 
       user_tweet.each do |t|
-        if t.start_with?("#") && t != "#emojistats"
+        if t.start_with?("#") && t != "#emojisentiment"
           hashtag = t
         end
       end
