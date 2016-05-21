@@ -30,11 +30,14 @@
 
  .header {
    background-color: #FDD700;
-   position: relative;
+   position: fixed;
+   width: 100%;
    text-align: center;
    padding-bottom: .2em;
    z-index: 9999;
+   display: block;
  }
+
 
  .header .navigation a {
    font-weight: 600;
@@ -106,9 +109,17 @@
 /*_________ footer __________*/
 
 .footer {
-  width: 92%;
-  margin: auto;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 4%;
+  padding-bottom: 2em;
+  display: block;
+  z-index: 9;
+  text-align: center;
 }
+
+
 
 .footer ul {
   list-style-type: none;
