@@ -3,19 +3,23 @@
 <%= form_for(:message, url: contact_path) do |message_form| %>
 
     <div class="field">
-      <%= message_form.text_field :name, placeholder: "Name" %>
+      <%= message_form.text_field :name, placeholder: "Full Name", required: true %>
     </div>
 
     <div class="field">
-      <%= message_form.email_field :email, placeholder: "Email"%>
+      <%= message_form.text_field :company_name, placeholder: "Company Name", required: true %>
     </div>
 
     <div class="field">
-      <%= message_form.text_area :content, placeholder: "Message"%>
+      <%= message_form.email_field :email, placeholder: "Email", required: true %>
     </div>
 
     <div class="field">
-      <%= message_form.submit "Send" %>
+      <%= message_form.text_area :content, placeholder: "Message", required: true %>
+    </div>
+
+    <div class="field">
+      <%= message_form.submit "Send", require: true %>
     </div>
 
 <% end %>
