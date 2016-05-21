@@ -8,6 +8,7 @@ skip_before_action :verify_authenticity_token
 
   def response
     @response = request.raw_post
+    p response
   end
 
 end
