@@ -38,6 +38,10 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (6.0.3)
+    aws (2.10.2)
+      http_connection
+      uuidtools
+      xml-simple
     bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -83,6 +87,7 @@ GEM
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     http-form_data (1.0.1)
+    http_connection (1.4.4)
     http_parser.rb (0.6.0)
     httparty (0.13.7)
       json (~> 1.8)
@@ -194,6 +199,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
+    uuidtools (2.1.5)
     warden (1.2.6)
       rack (>= 1.0)
     web-console (2.3.0)
@@ -203,11 +209,13 @@ GEM
       sprockets-rails (>= 2.0, < 4.0)
     whenever (0.9.4)
       chronic (>= 0.6.3)
+    xml-simple (1.1.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws
   bcrypt (~> 3.1.7)
   better_errors
   binding_of_caller
