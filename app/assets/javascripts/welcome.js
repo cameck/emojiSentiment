@@ -74,8 +74,15 @@ $(document).ready(function(){
 });
 
 
-  // fade in Pages
+  // fade in/out Pages
+
   $('#show-page').fadeIn(1000);
   $('#fullpage').fadeIn(2000);
 
+  $('.show-nav').click(function(e) {
+    e.preventDefault();
+    $('#show-page').fadeOut('slow', function() {
+      window.location = '/';
+    });
+  });
 });
