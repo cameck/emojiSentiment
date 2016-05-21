@@ -20,7 +20,7 @@
 		var preloaderContent = '<div class="preloader-container">' +
 													 '<div class="loader-and-text">'	+
 													 '<div class="loader"></div> </div>' +
-		    							 		 '</div>'
+		    							 		 '</div>';
 		var selector = this.selector,
 			popup = new $.Popup(settings);
 
