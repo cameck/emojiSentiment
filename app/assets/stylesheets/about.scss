@@ -12,7 +12,8 @@
 .description_about p {
   border-top: .1em solid rgba(0, 0, 0, .15);
   padding-top: 1.8em;
-  margin-top: 2.0em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   text-align: center;
   font-weight: 300;
 }
@@ -22,9 +23,10 @@
 
 .people_container {
   border-top: .1em solid rgba(0, 0, 0, .15);
-  padding-top: 1.8em;
-  margin-top: 2em;
+  // padding-top: 1.8em;
   display: flex;
+	flex-wrap: wrap;
+	margin: auto;
   justify-content: space-between;
 }
 
@@ -34,6 +36,7 @@
 
 .emoji_people {
   font-size: 1.5em;
+  margin-top: 2em;
 }
 
 .name_people {
