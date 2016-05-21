@@ -58,7 +58,7 @@ $(document).ready(function(){
     $('.count').each(function () {
     var $this = $(this);
     jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
-      duration: 1000,
+      duration: 900,
       easing: 'swing',
       step: function () {
   		  $this.text(this.Counter.toFixed(2));
