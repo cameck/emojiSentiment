@@ -20,11 +20,11 @@ module EmojiSentiment
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.action_mailer.smtp_settings = {
-      address: "smtp.gmail.com",
+      address: "smtp.mailgun.org",
       port: 587,
-      domain: "gmail.com",
-      user_name: "emojisentiment@gmail.com",
-      password: "emojich9",
+      # domain: "gmail.com",
+      user_name: "postmaster@mg.emojisentiment.com",
+      password: ENV['POSTMASTER'],
       authentication: :plain,
       enable_starttls_auto: true
     }
@@ -32,6 +32,9 @@ module EmojiSentiment
     config.action_mailer.default_url_options = {
       host: "https://intense-coast-35405.herokuapp.com/"
     }
+    config.action_mailer.delivery_method = :mailgun
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.raise_delivery_errors = true
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
