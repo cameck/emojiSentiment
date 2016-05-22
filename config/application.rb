@@ -24,7 +24,7 @@ module EmojiSentiment
       port: 587,
       # domain: "gmail.com",
       user_name: "postmaster@mg.emojisentiment.com",
-      password: "daf0483c1e2a26059c15ca51fac2624c",
+      password: ENV['POSTMASTER'],
       authentication: :plain,
       enable_starttls_auto: true
     }
