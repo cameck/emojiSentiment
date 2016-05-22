@@ -126,4 +126,21 @@ class TwitterBot < ActiveRecord::Base
     end
     unpacked_emojis = unpacked_emojis.join
   end
+
+  def filter_params(params)
+    # For when users send tweet to receive a tweet back (Request sent from TwitterScannerController)
+    user_request = params
+    user_name = user_request[:name]
+    user_tweet = user_request[:text]
+
+    user_tweet = user_tweet.split
+    hashtag = []
+
+    user_tweet.each do |tweet|
+      if t.start_with?("#") && t != "#emojisentiment"
+        hashtag << tweet
+      end
+    end
+    filtered_params = {hashtag: hashtag[0], user_name: username}
+  end
 end
