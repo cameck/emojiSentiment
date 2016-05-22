@@ -36,6 +36,11 @@
 .agregate_sentiment_board {
   background-color: white;
   width: 100%;
+  border: .1em solid rgba(0, 0, 0, .0);
+}
+
+.agregate_sentiment_board:hover {
+  border: .1em solid rgba(0, 0, 0, .15);
 }
 
 .agregate_sentiment_board p {
@@ -109,7 +114,7 @@
 .sentiment_description {
   font-size: 1.5em;
   font-weight: 600;
-  border-bottom: 0.01em solid rgba(0, 0, 0, 0.15);
+  // border-bottom: 0.01em solid rgba(0, 0, 0, 0.15);
   margin: 0 0 .8em 0;
   padding-bottom: .6em;
 }
@@ -149,7 +154,15 @@
 .single_sentiment_board .container_board {
   background-color: white;
   width: 30%;
+  border: .1em solid rgba(0, 0, 0, .0);
 }
+
+.single_sentiment_board .container_board:hover {
+  background-color: white;
+  width: 30%;
+  border: .1em solid rgba(0, 0, 0, .15);
+}
+
 
 .single_sentiment_board .row {
   border-bottom: .1em solid rgba(0, 0, 0, .15);

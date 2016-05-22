@@ -1,34 +1,24 @@
 <div class="contact">
   <div class="title">
-    <p> Contact Us </p>
+    Contact Us
   </div>
-  <div class="contact_form">
-    <%= form_for(:message, url: contact_path) do |message_form| %>
+  <div id="mc_embed_signup">
+    <form action="//EmojiSentiment.us13.list-manage.com/subscribe/post?u=f8cc8722cad0c947b644cd3ef&amp;id=11fd5a13db" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
-        <div class="field">
-          <%= message_form.text_field :name, placeholder: "Full Name*", required: true %>
-        </div>
+    <span><input type="text" placeholder="Name*" value="" name="FNAME" class="required" id="mce-FNAME"></span>
 
-        <div class="field">
-          <%= message_form.email_field :email, placeholder: "Email*", required: true %>
-        </div>
+    <span><input type="text" placeholder="Lastname*" value="" name="LNAME" class="required" id="mce-LNAME"></span>
 
-        <!-- <div class="field">
-          <%= message_form.text_field :company_name, placeholder: "Company Name" %>
-        </div> -->
+    <input type="email" placeholder="Email*" value="" name="EMAIL" class="required email" id="mce-EMAIL">
 
-        <div class="field">
-          <%= message_form.text_area :content, placeholder: "Message*", required: true %>
-        </div>
+    <input type="text" placeholder="Message*" value="" name="MMESSAGE" class="required" id="mce-MMESSAGE">
 
-        <div class="field">
-          <%= message_form.submit "SEND", require: true %>
-        </div>
-
-        <div class="required">
-          * Required fields
-        </div>
-
-    <% end %>
+    <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f8cc8722cad0c947b644cd3ef_11fd5a13db" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="SEND" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </form>
   </div>
 </div>
