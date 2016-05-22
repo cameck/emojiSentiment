@@ -141,6 +141,8 @@ class TwitterBot < ActiveRecord::Base
         hashtag << tweet
       end
     end
+
     p "Filtered Params Result: #{filtered_params = {hashtag: hashtag[0], user_name: user_name}}"
+    filtered_params = {hashtag: hashtag[0], user_name: user_name}
   end
 end
