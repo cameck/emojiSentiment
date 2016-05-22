@@ -1,25 +1,34 @@
-<h2>Contact Us</h2>
+<div class="contact">
+  <div class="title">
+    <p> Contact Us </p>
+  </div>
+  <div class="contact_form">
+    <%= form_for(:message, url: contact_path) do |message_form| %>
 
-<%= form_for(:message, url: contact_path) do |message_form| %>
+        <div class="field">
+          <%= message_form.text_field :name, placeholder: "Full Name*", required: true %>
+        </div>
 
-    <div class="field">
-      <%= message_form.text_field :name, placeholder: "Full Name", required: true %>
-    </div>
+        <div class="field">
+          <%= message_form.email_field :email, placeholder: "Email*", required: true %>
+        </div>
 
-    <div class="field">
-      <%= message_form.text_field :company_name, placeholder: "Company Name", required: true %>
-    </div>
+        <!-- <div class="field">
+          <%= message_form.text_field :company_name, placeholder: "Company Name" %>
+        </div> -->
 
-    <div class="field">
-      <%= message_form.email_field :email, placeholder: "Email", required: true %>
-    </div>
+        <div class="field">
+          <%= message_form.text_area :content, placeholder: "Message*", required: true %>
+        </div>
 
-    <div class="field">
-      <%= message_form.text_area :content, placeholder: "Message", required: true %>
-    </div>
+        <div class="field">
+          <%= message_form.submit "SEND", require: true %>
+        </div>
 
-    <div class="field">
-      <%= message_form.submit "Send", require: true %>
-    </div>
+        <div class="required">
+          * Required fields
+        </div>
 
-<% end %>
+    <% end %>
+  </div>
+</div>

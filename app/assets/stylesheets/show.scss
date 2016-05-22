@@ -18,7 +18,7 @@
 
 .search_hashtag {
   text-align: center;
-  font-size: 2.4em;
+  font-size: 2.2em;
   font-weight: 700;
 }
 
@@ -97,71 +97,46 @@
 /*_________ agregate_sentiment_board_description __________*/
 
 .agregate_sentiment_board_description {
-  margin-top: 2em;
-  background-color: white;
-  width: 70vh;
+  width: 74vh;
 }
-//
-// .agregate_sentiment_board_description p {
-//   font-weight: 100;
-//   font-size: .85em;
-//   margin: 0 .8em .1em .5em;
-//   padding-top: .8em;
-//   text-align: right;
-// }
-//
-// .agregate_sentiment_description {
-//   font-size: 1.5em;
-//   font-weight: 600;
-//   float: right;
-// }
-//
-// .sentiment_description {
-//   font-size: 1.5em;
-//   font-weight: 600;
-// }
-//
-// .sentiment_description span {
-//   font-weight: 100;
-// }
-//
-// .agregate_sentiment_board_description .row {
-//   border-bottom: .1em solid rgba(0, 0, 0, .15);
-//   margin: 0 .7em .8em .7em;
-//   padding-bottom: .4em;
-// }
-//
-// .description_links {
-//   color: black;
-//   font-size: .6em;
-//   font-weight: 100;
-//   margin: 0 1.2em 0 1.2em;
-//   padding-bottom: 1.6em;
-// }
-//
-// .description_links .sentiment_color {
-//   float: right;
-// }
-//
-// .description_links .sentiment_color span {
-//   margin-left: 1.5em;
-// }
-//
-// .fa-circle {
-//   margin-left: .5em;
-// }
-//
-// .c_1 .fa-circle {
-//   color: #FF6168;
-// }
-//
-// .c_2 .fa-circle {
-//   color: #55ACEE;
-// }
-//
-// .c_3 .fa-circle {
-//   color: #2CC6AB;
-// }
+
+.agregate_sentiment_description {
+  font-size: 1.5em;
+  font-weight: 600;
+  float: right;
+}
+
+.sentiment_description {
+  font-size: 1.5em;
+  font-weight: 600;
+  border-bottom: 0.01em solid rgba(0, 0, 0, 0.15);
+  margin: 0 0 .8em 0;
+  padding-bottom: .6em;
+}
+
+.sentiment_description span {
+  font-weight: 100;
+}
+
+.agregate_sentiment_board_description .row {
+  border-bottom: .1em solid rgba(0, 0, 0, .15);
+  margin: 0 .7em .8em .7em;
+  padding-bottom: .4em;
+}
+
+.agregate_description_links {
+  color: black;
+  font-size: .6em;
+  font-weight: 100;
+}
+
+.agregate_description_links .sentiment_color {
+  float: right;
+}
+
+.agregate_description_links .sentiment_color span {
+  margin-left: 1.5em;
+}
 
 /*_________ Single_sentiment_board __________*/
 

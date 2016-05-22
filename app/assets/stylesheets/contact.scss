@@ -1,0 +1,78 @@
+.contact {
+  margin: auto;
+  width: 45%;
+}
+
+.contact .title {
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: 700;
+}
+
+.contact_form {
+  border-top: .1em solid rgba(0, 0, 0, .15);
+  padding-top: 1.8em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  font-weight: 300;
+}
+
+.required {
+  float: right;
+  opacity: .3;
+  font-size: .85em;
+}
+
+/*________________________________*/
+/*_________ FORM STYLING__________*/
+
+.contact input, select, textarea {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	outline: none;
+	border: none;
+  border-bottom: .1em solid rgba(0, 0, 0, .15);
+	border-radius: 0;
+  padding-left: 1.1em;
+  height: 3em;
+  margin-bottom: 2em;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+}
+
+ #message_content {
+    padding-top: .7em;
+    background-color: #F2F2F2;
+}
+
+.contact input {
+  background-color: #F2F2F2;
+}
+
+
+/*_____________BUTTON_____________*/
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #000;
+    border: none;
+    color: white;
+    padding-top: .2em;
+    margin-top: 3em;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    font-size: .9em
+}
+
+nput[type=button], input[type=submit]:hover {
+    background-color: white;
+    color: #000;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}

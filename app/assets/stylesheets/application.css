@@ -34,7 +34,7 @@
    width: 100%;
    text-align: center;
    padding-bottom: .2em;
-   z-index: 9999;
+   z-index: 50;
    display: block;
  }
 
