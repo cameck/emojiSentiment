@@ -24,7 +24,7 @@ $(document).ready(function(){
     var key = e.which;
     if ( key == 13 && $.trim($("#hash_tag").val()) ) {
       $('#fp-nav').hide('slow');
-      $.post("/index/");
+      $.post("/results/");
     }
   });
   //Hide Detailed emoji data on page load
