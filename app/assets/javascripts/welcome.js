@@ -1,6 +1,16 @@
 //Hide and show the search icon on click for the home page search box
 $(document).ready(function(){
-  // $('#fullpage').fullpage();
+
+  window.location.hash = "#Home"
+  // Initialize Full Page JS
+  $('#fullpage').fullpage({
+    anchors: ['Home', 'Why', 'About', 'Contact'],
+    navigation: true,
+    navigationPosition: 'right',
+    navigationTooltips: ['Home', 'Why', 'About', 'Contact'],
+    recordHistory: true
+  });
+  // Add and Replace font awesome icon when clicking on and off the search field
   $(".searchfield").focus(function() {
     $(this).attr('value', "");
     $(this).css('font-family', 'proxima-nova, sans-serif');
@@ -77,6 +87,7 @@ $(document).ready(function(){
   // fade in/out Pages
 
   $('#show-page').fadeIn(1000);
+  $('#fullpage').hide();
   $('#fullpage').fadeIn(2000);
 
   $('.show-nav').click(function(e) {
