@@ -1,4 +1,5 @@
-class Message
+class Message < ActionMailer::Base
+  default to: "emojisentiment@gmail.com"
 
   include ActiveModel::Model
   include ActiveModel::Conversion
