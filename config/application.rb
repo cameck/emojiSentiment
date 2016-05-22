@@ -20,11 +20,11 @@ module EmojiSentiment
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.action_mailer.smtp_settings = {
-      address: "smtp.gmail.com",
+      address: "smtp.mailgun.org",
       port: 587,
-      domain: "gmail.com",
-      user_name: "emojisentiment@gmail.com",
-      password: "emojich9",
+      # domain: "gmail.com",
+      user_name: "postmaster@mg.emojisentiment.com",
+      password: "daf0483c1e2a26059c15ca51fac2624c",
       authentication: :plain,
       enable_starttls_auto: true
     }

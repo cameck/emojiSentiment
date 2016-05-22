@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'aws'
-
+gem 'mail'
 #HTTParty
 gem 'httparty'
 # Schedule Cron Jobs
