@@ -137,7 +137,7 @@ class TwitterBot < ActiveRecord::Base
     hashtag = []
 
     user_tweet.each do |tweet|
-      if t.start_with?("#") && t != "#emojisentiment"
+      if tweet.start_with?("#") && tweet != "#emojisentiment"
         hashtag << tweet
       end
     end
