@@ -1,6 +1,6 @@
 //Hide and show the search icon on click for the home page search box
 $(document).ready(function(){
-
+  // Add the Anchor Link home so Full page JS works with Back Button
   window.location.hash = "#Home"
   // Initialize Full Page JS
   $('#fullpage').fullpage({
