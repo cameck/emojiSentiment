@@ -14,7 +14,7 @@ class TwitterBot < ActiveRecord::Base
   def search(input)
     # GET Twitter hashtag search Results
     input = URI.encode(input)
-    search = client.search("##{input}", result_type: "recent").take(500)
+    search = client.search("##{input}", result_type: "recent").take(1000)
     emoji_scan(search)
     rescue
       false
@@ -137,7 +137,7 @@ class TwitterBot < ActiveRecord::Base
     hashtag = []
 
     user_tweet.each do |tweet|
-      if tweet.start_with?("#") && tweet != "#emojisentiment"
+      if tweet.start_with?("#") && tweet.downcase != "#emojisentiment"
         hashtag << tweet
       end
     end
