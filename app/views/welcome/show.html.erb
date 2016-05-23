@@ -1,17 +1,18 @@
 <div id="show-page">
 
 
-  <div class="showresults">
-    <div class="search_hashtag">
-      #<%= @hash_tag %>
-    </div>
-    <div class="description_emoji_search">
-      <p>
-        Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
-        twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag next level brunch
-      </p>
-    </div>
+
     <% if @tweets && @tweets[0] && @sentiments.all? { |sentiment| sentiment } %>
+    <div class="showresults">
+      <div class="search_hashtag">
+        #<%= @hash_tag %>
+      </div>
+      <div class="description_emoji_search">
+        <p>
+          Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
+          twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag next level brunch
+        </p>
+      </div>
     <%= render 'tweet_totals' %>
     <%= render 'tweet_singles' %>
 
@@ -26,7 +27,16 @@
     <div id="thirdPlaceEmoji">
       <%= render 'thirdPlaceEmoji' %>
     </div>
-
+    <% else %>
+    <div class="showresults">
+      <div class="search_hashtag" style="font-size: 120px;">
+        💔
+      </div>
+      <div class="description_emoji_search">
+        <p>
+          Sorry! We are continuously working to expand our database of emojis!
+        </p>
+      </div>
     <% end  %>
 
 

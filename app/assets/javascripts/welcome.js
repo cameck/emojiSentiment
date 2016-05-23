@@ -13,7 +13,8 @@ $(document).ready(function(){
     navigation: true,
     navigationPosition: 'right',
     navigationTooltips: ['Home', 'Why', 'About', 'Contact'],
-    recordHistory: true
+    recordHistory: true,
+
   });
   // Add and Replace font awesome icon when clicking on and off the search field
   $(".searchfield").focus(function() {
