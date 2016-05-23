@@ -1,7 +1,12 @@
 //Hide and show the search icon on click for the home page search box
 $(document).ready(function(){
   // Add the Anchor Link home so Full page JS works with Back Button
-  window.location.hash = "#Home"
+
+  if (window.location.hash == "" && window.location.pathname == "/") {
+    window.location.hash = "#Home";
+  };
+
+
   // Initialize Full Page JS
   $('#fullpage').fullpage({
     anchors: ['Home', 'Why', 'About', 'Contact'],
@@ -85,16 +90,31 @@ $(document).ready(function(){
 
 
   // fade in/out Pages
+  var fadeOutShowPage = function(anchorTag) {
+    $('#show-page').fadeOut('slow', function() {
+    window.location = '/#' + anchorTag;
+    });
+  };
 
   $('#show-page').fadeIn(1000);
   $('#fullpage').hide();
   $('#fullpage').fadeIn(2000);
 
+  // Handle smoothness of transition from rails page to full page js
   $('.show-nav').click(function(e) {
     e.preventDefault();
-    $('#show-page').fadeOut('slow', function() {
-      window.location = '/';
-    });
+
+    if ( $(this).hasClass("home") ) {
+      fadeOutShowPage("Home");
+    } else if ( $(this).hasClass("why") ) {
+      fadeOutShowPage("Why");
+    } else if ( $(this).hasClass("about") ) {
+      fadeOutShowPage("About");
+    } else if ( $(this).hasClass("contact") ) {
+      fadeOutShowPage("Contact");
+    } else {
+      fadeOutShowPage("Home");
+    }
   });
 
 
