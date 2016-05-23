@@ -265,28 +265,3 @@
 .agregate_sentiment_board_description {
   margin: 0 auto;
 }
-
-/*Mobile View*/
-#mobile-page {
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  .fullpageJS,
-  .header,
-  .footer,
-  #fp-nav {
-    display: none !important;
-  }
-  #mobile-page {
-    display: block;
-    margin: 30vh 0;
-    width: 100%;
-  }
-  #mobile-page img {
-    width: 85%;
-  }
-  #mobile-page .descriptionlanding {
-    width: 75%;
-    margin: 0 auto;
-  }
-}
