@@ -6,15 +6,37 @@ $(document).ready(function(){
     window.location.hash = "#Home";
   };
 
-
-  // Initialize Full Page JS
-  $('#fullpage').fullpage({
+  var notMobileWindowSize = window.matchMedia( "(max-width: 768px)" ).matches;
+  var fullPage = function() {
+    $('#fullpage').fullpage({
     anchors: ['Home', 'Why', 'About', 'Contact'],
     navigation: true,
     navigationPosition: 'right',
     navigationTooltips: ['Home', 'Why', 'About', 'Contact'],
     recordHistory: true,
   });
+
+}
+
+  if (!notMobileWindowSize) {
+    // Initialize Full Page JS
+    fullPage();
+    fullPage = function(){};
+  }
+
+  function resize() {
+    if (window.innerWidth > 768) {
+
+      $(".fullpageJS").attr("id", 'fullpage');
+      fullPage();
+      fullPage = function(){};
+    } else {
+      $(".fullpageJS").removeAttr("id");
+    }
+  };
+  resize();
+
+  window.onresize = resize;
   // Add and Replace font awesome icon when clicking on and off the search field
   $(".searchfield").focus(function() {
     $(this).attr('value', "");
@@ -70,29 +92,29 @@ $(document).ready(function(){
   $('.agregate_sentiment_board').popup(options);
 
   //counter animation
-    $('.count').each(function () {
+  $('.count').each(function () {
     var $this = $(this);
     jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
       duration: 1000,
       easing: 'swing',
       step: function () {
-  		  $this.text(this.Counter.toFixed(2));
-		  }
+        $this.text(this.Counter.toFixed(2));
+      }
     });
   });
 
-// caret progress bar animation
+  // caret progress bar animation
   $('.progress-caret').each(function () {
-  var $this = $(this);
-  var marginSize = parseFloat($this[0].nextSibling.innerText);
-  $($this).animate({ marginLeft:  marginSize + "%" }, 1000, "swing");
-});
+    var $this = $(this);
+    var marginSize = parseFloat($this[0].nextSibling.innerText);
+    $($this).animate({ marginLeft:  marginSize + "%" }, 1000, "swing");
+  });
 
 
   // fade in/out Pages
   var fadeOutShowPage = function(anchorTag) {
     $('#show-page').fadeOut('slow', function() {
-    window.location = '/#' + anchorTag;
+      window.location = '/#' + anchorTag;
     });
   };
 
