@@ -32,6 +32,7 @@
 
   <div class="wrap">
     <% if current_page?(root_path) %>
+
       <div class="header">
           <ul class="navigation">
             <li><a href="#Home" class="home">HOME</a></li>
@@ -39,17 +40,10 @@
             <li><a href="#About" class="about">ABOUT</a></li>
             <li><a href="#Contact" class="contact">CONTACT</a></li>
           </ul>
-          <!-- <ul class="sign_up_out">
-            <% if user_signed_in? %>
-                  Hello, <%= current_user.name %> <%= current_user.last_name %>
-              <li><%= link_to('LOG OUT', destroy_user_session_path, :method => :delete) %></li>
-              <% else %>
-              <li><a class="modal-trigger" href="#modal1">LOG IN</a></li>
-              <li><a class="modal-trigger" href="#modal2">SIGN UP</a></li>
-            <% end %>
-          </ul> -->
       </div>
+
     <% else %>
+
       <div class="header">
           <ul class="navigation">
             <li><a href="<%= root_path %>#Home" class="home show-nav">HOME</a></li>
@@ -57,16 +51,8 @@
             <li><a href="<%= root_path %>#About" class="about show-nav">ABOUT</a></li>
             <li><a href="<%= root_path %>#Contact" class="contact show-nav">CONTACT</a></li>
           </ul>
-          <!-- <ul class="sign_up_out">
-            <% if user_signed_in? %>
-                  Hello, <%= current_user.name %> <%= current_user.last_name %>
-              <li><%= link_to('LOG OUT', destroy_user_session_path, :method => :delete) %></li>
-              <% else %>
-              <li><a class="modal-trigger" href="#modal1">LOG IN</a></li>
-              <li><a class="modal-trigger" href="#modal2">SIGN UP</a></li>
-            <% end %>
-          </ul> -->
       </div>
+
     <% end %>
     <div class="content_body">
       <%= yield %>
@@ -88,39 +74,24 @@
       </div>
       <div class="description_about">
         <p>
-          Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
-          twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag next level brunch
-          Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
-          <br>
-          twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag next level brunch
-        </p>
+          <strong>Why Emojis?</strong> As our world becomes increasingly digital and fast-paced, emojis are
+          becoming more and more popular. According to these <a href="http://www.statista.com/statistics/476354/reasons-usage-emojis-internet-users-us/statistics"
+          target="_blank">statistics</a> over 70% of people feel that emojis more accurately express what they
+          are thinking. More accuracy means a better tool to measure sentiment.
         <p>
-          Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
-          twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag next level brunch
-          Next level brunch mumblecore umami offal. Mumblecore truffaut meh umami DIY,
-          <br>
-          twee forage fixie quinoa keffiyeh crucifix XOXO. Tumblr waistcoat retro tousled four loko, swag next level brunch
+          <strong>What is Sentiment?</strong> <a href="http://dictionary.cambridge.org/us/dictionary/english/sentiment"
+           target="_blank"> The Cambridge Academic Content Dictionary</a> defines it as, "a general feeling,
+            attitude, or opinion about something". With #EmojiSentiment we take this one step further, by
+            analyzing the top 3 tweets for your brand we give you a sentiment score from 0 - 100; 0 being
+            the worst attitude towards something and 100 being the best possible attitude towards something.
+            Using our tool, you can complement your other sentiment analysis suites with an additional insight.
+
         </p>
 
       </div>
     </div>
   </div>
 
-  <!-- <div id="modal1" class="modal">
-      <div class="modal-content">
-        <div>
-          <%= render partial: 'login.html.erb' %>
-        </div>
-      </div>
-  </div>
-
-  <div id="modal2" class="modal">
-    <div class="modal-content">
-      <div>
-        <%= render partial: 'register.html.erb' %>
-      </div>
-    </div>
-  </div> -->
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
