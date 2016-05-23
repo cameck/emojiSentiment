@@ -98,7 +98,7 @@
   font-size: .6em;
   font-weight: 100;
 }
-
+/*_______________________ pop-up ________________________*/
 /*_________ agregate_sentiment_board_description __________*/
 
 .agregate_sentiment_board_description {
@@ -117,6 +117,7 @@
   // border-bottom: 0.01em solid rgba(0, 0, 0, 0.15);
   margin: 0 0 .8em 0;
   padding-bottom: .6em;
+  border-bottom: .01em solid rgba(0, 0, 0, .15);
 }
 
 .sentiment_description span {
@@ -214,12 +215,12 @@
   float: right;
 }
 
-.sentiment_description {
+.emoji_unicodes {
   font-size: 1.5em;
   font-weight: 600;
 }
 
-.sentiment_description span {
+.emoji_unicodes span {
   font-weight: 100;
 }
 
@@ -235,6 +236,16 @@
   font-weight: 100;
   margin: 0 1.2em 0 1.2em;
   padding-bottom: 1.6em;
+}
+
+.description_links a {
+  text-decoration: none;
+  color: #55ACEE;
+}
+
+.description_links a:hover {
+  text-decoration: underline;
+  color: #55ACEE;
 }
 
 .description_links .sentiment_color {
@@ -267,7 +278,7 @@
 .backarrow img {
   width: .8em;
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 4%;
 }
 
@@ -302,4 +313,56 @@
 
 #third {
   margin-left: 82.15%;
+}
+
+
+
+/*_______________________________*/
+/*_________ SORRY PAGE __________*/
+
+.sorry_page {
+  height:30%;
+  width: 45%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  margin: auto;
+}
+
+.heart {
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: 700;
+  font-size: 5em;
+}
+
+.description_sorry_page p {
+  // border-top: .1em solid rgba(0, 0, 0, .15);
+  // padding-top: 1.8em;
+  margin-top: 1.5em;
+  margin-bottom: 1.9em;
+  text-align: center;
+  font-weight: 300;
+}
+
+.description_sorry_page span {
+  font-weight: 700;
+}
+
+
+.another_search {
+  border-top: .1em solid rgba(0, 0, 0, .15);
+  padding-top: 1.8em;
+  margin-top: 1.5em;
+  margin-bottom: 1.9em;
+  text-align: center;
+  font-weight: 300;
+}
+
+.another_search a {
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
 }

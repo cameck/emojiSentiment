@@ -179,7 +179,7 @@
     height: 4px;
     width: 4px;
     border: 0;
-    background: #333;
+    background: #000;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;
@@ -206,7 +206,7 @@
     top: -2px;
     color: #000;
     font-size: .8em;
-    font-weight: 600;
+    font-weight: 100;
     font-family: "proxima-nova";
     white-space: nowrap;
     max-width: 220px;

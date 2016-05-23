@@ -28,14 +28,19 @@
       <%= render 'thirdPlaceEmoji' %>
     </div>
     <% else %>
-    <div class="showresults">
-      <div class="search_hashtag" style="font-size: 120px;">
+    <div class="sorry_page">
+      <div class="heart">
         💔
       </div>
-      <div class="description_emoji_search">
+      <div class="description_sorry_page">
         <p>
-          Sorry! We are continuously working to expand our database of emojis!
+          Ohhh snap! We counldnt find enough information for <span>#<%= @hash_tag %></span>
+          <br>
+          Good news is we are continuously working to expand our database of emojis!
         </p>
+        <div class="another_search">
+          To make another search <%= link_to "Click Here".html_safe, root_path %>
+        </div>
       </div>
     <% end  %>
 
@@ -43,6 +48,9 @@
     <div id="sentiment-data-popup">
       <div class="agregate_sentiment_board_description">
         <!-- <div class="container"> -->
+        <div class="sentiment_description">
+          Cheat Sheet
+        </div>
           <div class="sentiment_description">
             Sentiment: <span>Measured in a scale from 0 - 100</span>
           </div>
