@@ -14,3 +14,10 @@
 //= require jquery_ujs
 // require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  // Popup for Footer
+  $('#faq-text').hide();
+  var options = { content : $('#faq-text') };
+  $('#faq-link').popup(options);
+});

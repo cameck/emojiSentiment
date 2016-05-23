@@ -251,3 +251,17 @@
     table-layout:fixed;
     width: 100%;
 }
+
+/*Popup Fix*/
+.popup_cont {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.popup_cont .about,
+.agregate_sentiment_board_description {
+  width: 75%;
+}
+.agregate_sentiment_board_description {
+  margin: 0 auto;
+}

@@ -52,7 +52,20 @@
   background-color: #F2F2F2;
 }
 
+//Make First and Last name input inline
+#inline-input {
+  display: flex;
+  justify-content: space-between;
+}
 
+#first-name,
+#last-name {
+  flex-grow: .5;
+}
+
+#mce-FNAME {
+  width: 95%;
+}
 /*_____________BUTTON_____________*/
 
 input[type=button], input[type=submit], input[type=reset] {
