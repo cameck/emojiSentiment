@@ -58,6 +58,9 @@
   font-weight: 600;
 }
 
+// TWITTER BUTTON
+
+
 .tweet_button {
   // border-top: .1em solid rgba(0, 0, 0, .15);
   padding-top: 3.5em;
@@ -66,9 +69,20 @@
 }
 
 .tweet_button a {
-  background-color: white;
+  // background-color: white;
   text-decoration: none;
-  color: black;
-  padding: 1em 2em;
+  // color: black;
+  // padding: 1em 2em;
   font-weight: 600;
+}
+
+.twitter-hashtag-button {
+   background: #1b95e0;
+   color: #fff;
+   border-radius: 4px;
+   padding: .75em 1em;
+}
+
+.twitter-hashtag-button .fa-twitter {
+  color: #fff;
 }
