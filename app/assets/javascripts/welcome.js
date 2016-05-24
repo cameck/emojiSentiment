@@ -4,7 +4,7 @@ $(document).ready(function(){
 
   if (window.location.hash == "" && window.location.pathname == "/") {
     window.location.hash = "#Home";
-  };
+  }
 
   var notMobileWindowSize = window.matchMedia( "(max-width: 768px)" ).matches;
   var fullPage = function() {
@@ -15,8 +15,7 @@ $(document).ready(function(){
     navigationTooltips: ['Home', 'Why', 'About', 'Contact'],
     recordHistory: true,
   });
-
-}
+};
 
   if (!notMobileWindowSize) {
     // Initialize Full Page JS
@@ -33,7 +32,7 @@ $(document).ready(function(){
     } else {
       $(".fullpageJS").removeAttr("id");
     }
-  };
+  }
   resize();
 
   window.onresize = resize;
