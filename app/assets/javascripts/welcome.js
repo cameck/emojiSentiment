@@ -137,6 +137,4 @@ $(document).ready(function(){
       fadeOutShowPage("Home");
     }
   });
-
-
 });
