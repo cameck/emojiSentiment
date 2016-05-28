@@ -39,8 +39,17 @@
   margin-top: 2em;
 }
 
+.emoji_people a {
+  text-decoration: none;
+}
+
 .name_people {
   font-weight: 600;
+}
+
+.name_people a {
+  text-decoration: none;
+  color: black;
 }
 
 .twitter_people {
