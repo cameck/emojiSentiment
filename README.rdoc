@@ -17,4 +17,4 @@ Emoji are revolutionizing the way we communicate—and with Emoji Sentiment, you
 
 Emoji Sentiment.
 
-[EmojiSentiment](http://emojisentiment.com)
+http://emojisentiment.com
