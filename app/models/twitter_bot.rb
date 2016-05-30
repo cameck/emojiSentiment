@@ -129,7 +129,7 @@ class TwitterBot < ActiveRecord::Base
 
   def filter_params(params)
     # For when users send tweet to receive a tweet back (Request sent from TwitterScannerController)
-    user_request = params
+    p "User Request=#{user_request = params}"
     user_name = user_request[:name]
     user_tweet = user_request[:text]
 
