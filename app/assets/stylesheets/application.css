@@ -53,7 +53,7 @@
    padding: 0;
  }
 
- .header .sign_up_out a {
+ .header .donate a {
    font-weight: 600;
    font-size: .9em;
    text-decoration: none;
@@ -61,6 +61,24 @@
    margin: 0 0 0 1.5em;
    -webkit-transition: all .4s;
    transition: all .4s;
+ }
+
+ .header .donate a {
+   background-color: black;
+   padding: 1em 2em 1em 2em;
+ }
+
+ .header .donate a:hover {
+   background-color: white;
+   color: black;
+   padding-bottom: 1em;
+   border-bottom: none;
+ }
+
+ .donate {
+   position: absolute;
+   right: 4.5%;
+   top: .75em;
  }
 
  .header a:hover {
@@ -78,18 +96,6 @@
    border-bottom: .3em solid black;
  }
 
- .header .sign_up_out li:last-child a {
-   background-color: black;
-   padding: 1.1em 2em 1.15em 2em;
- }
-
- .header .sign_up_out li:last-child a:hover {
-   background-color: white;
-   color: black;
-   padding-bottom: 0;
-   border-bottom: none;
- }
-
  .header ul {
    list-style-type: none;
    display: inline-block;
@@ -99,11 +105,6 @@
  .header li {
    display: inline-block;
  }
-
-.sign_up_out {
-  position: absolute;
-  right: 4%;
-}
 
 /*___________________________*/
 /*_________ footer __________*/
@@ -118,8 +119,6 @@
   z-index: 9;
   text-align: center;
 }
-
-
 
 .footer ul {
   list-style-type: none;
