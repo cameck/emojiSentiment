@@ -16,3 +16,5 @@ Search any topic. Find out which emoji are being used most in conversations abou
 Emoji are revolutionizing the way we communicate—and with Emoji Sentiment, you get a better picture of what, when and how to say… what you want to say to elicit the sentiment you need.
 
 Emoji Sentiment.
+
+[http://emojisentiment.com](http://emojisentiment.com)

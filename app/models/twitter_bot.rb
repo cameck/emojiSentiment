@@ -141,7 +141,7 @@ class TwitterBot < ActiveRecord::Base
         hashtag << tweet
       end
     end
-    # Easter Egg for Silly Users 
+    # Easter Egg for Silly Users
     hashtag[0] = "silly" if !hashtag[0] || hashtag[0] == "#"
     p "Filtered Params Result: #{filtered_params = {hashtag: hashtag[0], user_name: user_name}}"
     filtered_params = {hashtag: hashtag[0], user_name: user_name}
