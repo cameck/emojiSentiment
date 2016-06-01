@@ -29,16 +29,17 @@
     <% else %>
     <div class="sorry_page">
       <div class="heart">
-        💔
+        awwwww 💩
       </div>
       <div class="description_sorry_page">
         <p>
-          Ohhh snap! We counldnt find enough information for <span>#<%= @hash_tag %></span>
+          Looks like our servers couldn’t handle the intensity of your search for <span>#<%= @hash_tag %></span>
           <br>
-          The good news is that we are continuously working to expand our database of emojis!
+          (Because we’re students. And broke AF.)
         </p>
         <div class="another_search">
-          To make another search <%= link_to "Click Here".html_safe, root_path %>
+          How about a 💰<a href="https://twitter.com/emojisentiment" target="_blank">Donation</a> to keep us up and running 😁.
+          <!-- or another search by <%= link_to "Clicking Here".html_safe, root_path %> -->
         </div>
       </div>
     <% end  %>
