@@ -9,7 +9,9 @@
       </div>
       <div class="description_emoji_search">
         <p>
-
+          <span>#<%= @hash_tag %></span> has a score of <span><%= "#{@average_sentiment}" %></span> based on <span><%= @total_aggregate_tweets %></span> emoji used across the last 1000 tweets.
+          <br>
+          If you'd like more information on how sentiment is determined please review our <span id="cheat_link">Cheat Sheet</span>.
         </p>
       </div>
     <%= render 'tweet_totals' %>
@@ -38,7 +40,7 @@
           (Because we’re students. And broke AF.)
         </p>
         <div class="another_search">
-          How about a 💰<a href="https://twitter.com/emojisentiment" target="_blank">Donation</a> to keep us up and running 😁.
+          How about a 💰<a href="https://cash.me/emojisentiment" target="_blank">Donate</a> to keep us up and running 😁.
           <!-- or another search by <%= link_to "Clicking Here".html_safe, root_path %> -->
         </div>
       </div>
@@ -47,24 +49,25 @@
 
     <div id="sentiment-data-popup">
       <div class="agregate_sentiment_board_description">
-        <!-- <div class="container"> -->
-        <div class="sentiment_description">
+        <div class="sentiment_description_title">
           Cheat Sheet
         </div>
           <div class="sentiment_description">
             Sentiment: <span>Measured in a scale from 0 - 100</span>
           </div>
           <div class="sentiment_description">
-            Aggregate Sentiment: <span>Average of top 3 Emojis</span>
-          </div>
-        <!-- </div> -->
-        <div class="agregate_description_links">
-          <span>Emoji sentiment based on: <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144296" target="_blank">Emoji Sentiment Ranking 1.0</a><span>
-            <span class="sentiment_color">
+            Color values:
+            <span class="sentiment_color_1">
               <span class="c_1">0 = Negativity <i class="fa fa-circle" aria-hidden="true"></i></span>
               <span class="c_2">50 = Neutrality <i class="fa fa-circle" aria-hidden="true"></i></span>
               <span class="c_3">100 = Positivity <i class="fa fa-circle" aria-hidden="true"></i></span>
             </span>
+          </div>
+          <div class="sentiment_description">
+            Aggregate Sentiment: <span>Average of top 3 Emojis</span>
+          </div>
+          <div class="sentiment_description_last">
+            Emoji sentiment based on: <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144296" target="_blank">Emoji Sentiment Ranking 1.0</a><span>
           </div>
         </div>
       </div>
