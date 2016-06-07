@@ -71,7 +71,9 @@
   opacity: .0;
 }
 
-
+#cheat_link {
+  cursor: pointer;
+}
 #cheat_link:hover {
   text-decoration: underline;
 }

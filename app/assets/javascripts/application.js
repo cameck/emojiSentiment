@@ -19,5 +19,6 @@ $(document).ready(function() {
   // Popup for Footer
   $('#faq-text').hide();
   var options = { content : $('#faq-text') };
-  $('#faq-link').popup(options);
+  $('.faq-link').popup(options);
+  
 });

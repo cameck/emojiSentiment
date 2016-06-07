@@ -88,7 +88,7 @@ $(document).ready(function(){
   // Popup for show page
   $('#sentiment-data-popup').hide();
   var options = { content : $('#sentiment-data-popup') };
-  $('.agregate_sentiment_board').popup(options);
+  $('.cheat-sheet-link').popup(options);
 
   //counter animation
   $('.count').each(function () {
