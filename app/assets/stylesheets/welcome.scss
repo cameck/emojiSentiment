@@ -23,12 +23,17 @@
   margin: auto;
 }
 
-.description p {
+.description {
   border-top: .1em solid rgba(0, 0, 0, .15);
   padding-top: 2.3em;
   margin-top: 2.0em;
   text-align: center;
   font-weight: 300;
+}
+
+#description_top {
+  font-size: 1.3em;
+  font-weight: 600;
 }
 
 .landingsearch form {
@@ -91,6 +96,15 @@ button[type="submit"] {
   box-shadow: none;
   border-bottom: none;
   width: 75%;
+}
+
+#fqa_link {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#fqa_link:hover {
+  text-decoration: underline;
 }
 
 // Preloader CSS
