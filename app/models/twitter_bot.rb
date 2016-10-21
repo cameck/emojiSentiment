@@ -1,6 +1,4 @@
 class TwitterBot < ActiveRecord::Base
-
-
   def client
     # Initialize Twitter Authentication
     @client ||= Twitter::REST::Client.new do |config|
@@ -14,10 +12,10 @@ class TwitterBot < ActiveRecord::Base
   def search(input)
     # GET Twitter hashtag search Results
     input = URI.encode(input)
-    search = client.search("##{input}", result_type: "recent").take(1000)
+    search = client.search("##{input}", result_type: 'recent').take(1000)
     emoji_scan(search)
-    rescue
-      false
+  rescue
+    false
   end
 
   def emoji_scan(search)
@@ -50,37 +48,31 @@ class TwitterBot < ActiveRecord::Base
   def top_three_emojis(tweet_counts)
     # sort tweets to top 3 emojis
     sorted_tweets = tweet_counts.sort_by { |_key, value| value }
-    sorted_tweets = sorted_tweets.last(3).reverse
+    sorted_tweets.last(3).reverse
   end
 
   def get_sentiment(tweets)
     # analyze sentiment
     sentiments = []
-
     tweets.each do |tweet|
       emoji_sentiment = Sentiment.find_by(emoji: tweet)
-      sentiments << if emoji_sentiment
-                           '%.2f' % (emoji_sentiment.sentiment)
-                    end
+      sentiments << format('%.2f', emoji_sentiment.sentiment) if emoji_sentiment
     end
     sentiments
   end
 
   def calc_average_sentiment(tweets, sentiments)
     total_sentiment = []
-    total_occurences = 0
+    total_events = 0
     tweets.zip(sentiments).each do |tweet, sentiment|
       total_sentiment << tweet[1] * sentiment.to_f
-      total_occurences += tweet[1]
+      total_events += tweet[1]
     end
 
     score = 0
-    total_sentiment.each do |total_sentiment|
-      score += total_sentiment
-    end
-    if total_occurences && !total_occurences.zero?
-      '%.2f' % (score / total_occurences)
-    end
+    total_sentiment.each { |total| score += total }
+
+    format('%.2f', score / total_occurences) if total_events && total_events > 0
   end
 
   def calc_total_aggregate_tweets(tweets)
@@ -104,7 +96,7 @@ class TwitterBot < ActiveRecord::Base
   def correct_capitalization(emoji_names)
     emoji_capital_names = []
     emoji_names.each do |emoji_name|
-    emoji_capital_names << emoji_name.split.map(&:capitalize).join(' ')
+      emoji_capital_names << emoji_name.split.map(&:capitalize).join(' ')
     end
     emoji_capital_names
   end
@@ -128,7 +120,8 @@ class TwitterBot < ActiveRecord::Base
   end
 
   def filter_params(params)
-    # For when users send tweet to receive a tweet back (Request sent from TwitterScannerController)
+    # For when users send tweet to receive a tweet back
+    # (Request sent from TwitterScannerController)
     p "User Request=#{user_request = params}"
     user_name = user_request[:name]
     user_tweet = user_request[:text]
@@ -137,13 +130,14 @@ class TwitterBot < ActiveRecord::Base
     hashtag = []
 
     user_tweet.each do |tweet|
-      if tweet.start_with?("#") && tweet.downcase != "#emojisentiment"
+      if tweet.start_with?('#') && !tweet.casecmp('#emojisentiment')
         hashtag << tweet
       end
     end
     # Easter Egg for Silly Users
-    hashtag[0] = "silly" if !hashtag[0] || hashtag[0] == "#"
-    p "Filtered Params Result: #{filtered_params = {hashtag: hashtag[0], user_name: user_name}}"
-    filtered_params = {hashtag: hashtag[0], user_name: user_name}
+    hashtag[0] = 'silly' if !hashtag[0] || hashtag[0] == '#'
+    filtered_params = { hashtag: hashtag[0], user_name: user_name }
+    p "Filtered Params Result: #{filtered_params}"
+    filtered_params
   end
 end

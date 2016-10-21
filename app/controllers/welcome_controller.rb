@@ -5,12 +5,11 @@ class WelcomeController < ApplicationController
 
   def show
     @hash_tag = params[:hash_tag]
-    # Check if User Included a hash tag in their search query & delete if necessary
-    if @hash_tag[0] == "#"
-      @hash_tag[0] = ''
-    end
+    # Check if User Included a hash tag in their search query
+    # & delete if necessary
+    @hash_tag[0] = '' if @hash_tag[0] == '#'
     # New Twitter Bot object to run through Emoji parsing algorithm
-    tweets= TwitterBot.new()
+    tweets = TwitterBot.new
     @tweets = tweets.search(@hash_tag)
     if @tweets # Check if Twitter Request was Successful
       @total_aggregate_tweets = tweets.calc_total_aggregate_tweets(@tweets)
