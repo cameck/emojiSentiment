@@ -17,7 +17,7 @@ Emoji are revolutionizing the way we communicate—and with Emoji Sentiment, you
 
 Emoji Sentiment.
 
-http://emojisentiment.com
+https://emojisentiment.herokuapp.com/
 
 
 ## Boring Stuff..
